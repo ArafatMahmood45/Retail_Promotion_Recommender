@@ -4,46 +4,111 @@
 
 Retail Promotion Recommender is an AI-powered web application designed to help shoppers discover active promotions and discounts from retail stores at Square One Shopping Centre in Mississauga, Ontario.
 
-The application will allow users to explore available promotions across approximately 59 stores and receive personalized recommendations based on their interactions with stores and promotions.
+The application aims to bring promotions from different retailers into one platform and provide personalized recommendations based on shoppers' interactions and interests.
+
+The current prototype uses **50 retail stores, 300 synthetic promotions, 500 synthetic users, and 32,000 generated interactions**.
 
 ## Problem Statement
 
 Shoppers often miss discounts and limited-time promotions because information is spread across different retailer websites and platforms. This makes it difficult to discover relevant deals in one place.
 
-Our solution will bring retail promotions together in a single application and use machine learning to personalize how promotions are presented to each shopper.
+Our solution brings retail promotions together in a single application and uses machine learning to personalize how promotions are presented to each shopper.
 
 ## Project Objectives
 
 - Collect and organize retail store and promotion information.
-- Generate synthetic shopper interaction data for model development.
-- Develop a neural-network-based hybrid recommendation model using PyTorch.
-- Predict relevance scores for active promotions based on shopper interactions and promotion characteristics.
+- Generate realistic synthetic shopper interaction data.
+- Develop a Hybrid Neural Collaborative Filtering (Hybrid NCF) recommendation model using PyTorch.
+- Predict relevance scores for promotions based on shopper interactions and promotion characteristics.
 - Build a web application for browsing stores and personalized promotions.
+- Integrate a PostgreSQL database and FastAPI backend.
 - Deploy the completed prototype on Microsoft Azure.
 
-## How the Recommendation System Works
+## Dataset Development
 
-The system will use four connected datasets:
+The project uses four main datasets:
 
-1. **Users:** Synthetic shoppers with different interests and preferences.
-2. **Stores:** Retail stores, including names and categories.
-3. **Promotions:** Available discounts, promotion types, and validity dates.
-4. **Interactions:** Shopper activities such as views, clicks, saves, and purchases.
+| Dataset | Records | Description |
+|---|---:|---|
+| Users | 500 | Synthetic shopper accounts |
+| Stores | 50 | Retail store names and categories |
+| Promotions | 300 | Synthetic discounts, promotion types, product categories, and validity dates |
+| Interactions | 32,000 | Simulated views, clicks, saves, and purchases |
 
-The recommendation model will learn from historical interactions and store/promotion characteristics to predict the relevance of active promotions for individual users.
+### Synthetic Interaction Generation
 
-Promotions will be ranked based on their predicted relevance, while all active promotions remain accessible.
+A Python script (`generate_interactions.py`) was developed to generate shopper interactions using probabilistic rules.
+
+The script considers shoppers' preferred stores, categories, promotion types, discount sensitivity, and exploration probability.
+
+These preferences influence the likelihood of interacting with particular promotions while allowing shoppers to explore other categories.
+
+The generated interactions are validated against user account creation dates and promotion validity periods.
+
+**Note:** All promotions and shopper interactions are synthetic and do not represent verified retailer offers or actual customer behavior.
+
+## Data Preparation
+
+The `prepare_training_data.py` script was developed to:
+
+1. Validate the four main datasets.
+2. Combine users, stores, promotions, and interactions into `model_dataset.csv`.
+3. Prepare and encode features for machine learning.
+4. Split the interaction records chronologically into training, validation, and testing datasets.
+
+### Dataset Split
+
+| Dataset | Records | Percentage |
+|---|---:|---:|
+| Training | 22,400 | 70% |
+| Validation | 4,800 | 15% |
+| Testing | 4,800 | 15% |
+
+The synthetic preferences used to generate interactions are excluded from model training. This allows the model to learn shopper interests from observed interaction patterns.
+
+## Recommendation Model Development
+
+An initial **Hybrid Neural Collaborative Filtering (Hybrid NCF)** model has been implemented using PyTorch.
+
+The model combines:
+
+- **Collaborative signals:** User and promotion interaction patterns.
+- **Content features:** Store information, product categories, promotion types, and discount characteristics.
+
+The model predicts engagement relevance scores that can be used to rank promotions for individual shoppers.
+
+### Model Training
+
+The `train_recommender.py` script:
+
+1. Loads the prepared training and validation datasets.
+2. Builds and trains the Hybrid NCF neural network.
+3. Uses sampled unobserved promotions as negative training examples.
+4. Evaluates the model using held-out interactions.
+5. Saves the trained model as `hybrid_recommender.pt`.
+
+### Initial Model Evaluation
+
+The initial model was trained for 12 epochs and evaluated using 417 users with relevant test interactions.
+
+| Evaluation Metric | Result |
+|---|---:|
+| Precision@5 | 7.29% |
+| Recall@5 | 14.95% |
+| Hit Rate@5 | 31.65% |
+
+These are preliminary results based on synthetic data. Further evaluation and comparison against baseline recommendation methods are required.
 
 ## Technology Stack
 
-- **Python & Pandas:** Data processing and preparation
-- **PostgreSQL:** Relational database
-- **PyTorch:** Neural-network model development
-- **FastAPI:** Backend API
-- **Streamlit:** Web application interface
-- **Docker:** Containerization
-- **Microsoft Azure:** Cloud deployment
-- **GitHub:** Version control and team collaboration
+- **Python, Pandas & NumPy:** Data generation and processing
+- **PyTorch:** Hybrid recommendation model development
+- **PostgreSQL:** Relational database (planned integration)
+- **FastAPI:** Backend API (planned)
+- **Streamlit:** Web application interface (planned)
+- **Docker:** Containerization (planned)
+- **Microsoft Azure:** Cloud deployment (planned)
+- **Git & GitHub:** Version control and collaboration
 
 ## Project Team
 
@@ -54,4 +119,34 @@ Promotions will be ranked based on their predicted relevance, while all active p
 
 ## Project Status
 
-Currently in the initial development phase, focusing on project setup, retail data collection, database design, and preparation for recommendation model development.
+### Completed
+
+- [x] Initialized the project repository and development environment.
+- [x] Prepared 50 retail store records.
+- [x] Created 300 synthetic promotions with categories and validity periods.
+- [x] Generated 500 synthetic shopper profiles and preferences.
+- [x] Developed Python-based synthetic interaction generation.
+- [x] Generated 32,000 shopper interactions.
+- [x] Combined and validated the datasets for machine learning.
+- [x] Prepared training, validation, and test datasets.
+- [x] Implemented and trained an initial Hybrid NCF recommendation model.
+- [x] Evaluated the initial model and saved its trained parameters.
+
+### Remaining Work
+
+- [ ] Compare the recommendation model against baseline methods.
+- [ ] Improve model performance and evaluate recommendations at different ranking sizes.
+- [ ] Create and populate the PostgreSQL database.
+- [ ] Develop FastAPI endpoints for stores, promotions, and personalized recommendations.
+- [ ] Build the Streamlit user interface.
+- [ ] Connect user interactions to the backend and recommendation system.
+- [ ] Integrate and test the complete application.
+- [ ] Containerize the application using Docker.
+- [ ] Deploy the prototype to Microsoft Azure.
+- [ ] Complete final testing, documentation, and project demonstration.
+
+## Expected Outcome
+
+The completed application will allow shoppers to browse active promotions from participating retail stores and receive personalized promotion rankings based on their interaction history.
+
+The prototype will demonstrate how data engineering, machine learning, backend development, and cloud technologies can be combined to build a retail recommendation system.
