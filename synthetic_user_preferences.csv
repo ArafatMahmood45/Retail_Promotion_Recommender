@@ -1,0 +1,501 @@
+user_id,primary_store_category,secondary_store_category,preferred_store_ids,preferred_product_categories,preferred_promotion_type,discount_sensitivity,shopping_activity_level,exploration_probability,category_preference_strength,store_preference_strength
+1,Fashion,Footwear,"[30,33,38]","[""Seasonal Footwear"",""Sandals"",""Fashion Accessories""]",second_item_percentage_off,high,frequent,0.13,0.681,0.743
+2,Electronics,Fashion,"[9,26]","[""General Accessories"",""Outerwear""]",percentage_off,low,moderate,0.19,0.566,0.395
+3,Beauty,Footwear,"[15,16,39]","[""Dress Shoes"",""Makeup"",""Sneakers""]",second_item_percentage_off,high,moderate,0.179,0.68,0.7
+4,Fashion,Sportswear,"[6,26,28,32]","[""Workwear"",""Outdoor Accessories"",""Outerwear""]",percentage_off,high,light,0.284,0.786,0.698
+5,Fashion,Books & Gifts,"[34,46]","[""Fashion Accessories"",""Outerwear"",""Puzzles & Games"",""Workwear""]",bundle_amount_off,low,very_frequent,0.266,0.705,0.503
+6,Electronics,Department Store,"[12,49]","[""Mobile Accessories"",""Home Accessories"",""Audio Accessories""]",second_item_percentage_off,high,very_frequent,0.085,0.865,0.632
+7,Electronics,Sportswear,"[2,10,11]","[""Running Shoes"",""Wearable Accessories""]",second_item_percentage_off,medium,frequent,0.137,0.574,0.478
+8,Books & Gifts,Electronics,"[9,46]","[""Gift Items"",""Reading Accessories"",""Wearable Accessories"",""Audio Accessories""]",amount_off,high,moderate,0.142,0.858,0.736
+9,Fashion,Department Store,"[19,25,50]","[""Outerwear"",""Seasonal Accessories"",""Workwear""]",bundle_amount_off,medium,moderate,0.269,0.826,0.631
+10,Fashion,Electronics,"[12,20,21]","[""Denim"",""Fashion Accessories"",""Mobile Plans"",""Knitwear""]",amount_off,low,moderate,0.284,0.628,0.473
+11,Footwear,Home & Lifestyle,"[37,40,47]","[""Shoe Care"",""Home Storage"",""Home Furnishings""]",amount_off,medium,moderate,0.298,0.728,0.43
+12,Books & Gifts,Electronics,"[11,46]","[""Mobile Plans"",""Home Electronics"",""Audio Accessories""]",percentage_off,low,frequent,0.203,0.752,0.442
+13,Books & Gifts,Sportswear,"[4,46]","[""Athletic Tops"",""Outdoor Accessories"",""Running Shoes"",""Athletic Apparel""]",amount_off,low,moderate,0.146,0.736,0.759
+14,Fashion,Beauty,"[15,22]","[""Makeup"",""Beauty Gift Sets"",""Knitwear""]",bundle_amount_off,medium,frequent,0.171,0.732,0.745
+15,Footwear,Department Store,"[38,49]","[""Boots"",""Everyday Footwear"",""Seasonal Accessories""]",amount_off,medium,moderate,0.268,0.686,0.527
+16,Electronics,Books & Gifts,"[9,10,11,46]","[""Tech Accessories"",""Wearable Accessories"",""Home Electronics""]",second_item_percentage_off,high,light,0.249,0.759,0.499
+17,Fashion,Electronics,"[11,30,32]","[""Clothing Basics"",""Wearable Accessories"",""Tech Accessories"",""Dresses""]",bundle_amount_off,high,moderate,0.151,0.597,0.59
+18,Fashion,Books & Gifts,"[21,23,24,46]","[""Clothing Basics"",""Puzzles & Games"",""Reading Accessories""]",amount_off,medium,very_frequent,0.121,0.671,0.408
+19,Beauty,Footwear,"[13,14,38]","[""Hair Care"",""Shoe Care""]",second_item_percentage_off,high,moderate,0.228,0.688,0.431
+20,Beauty,Department Store,"[17,50]","[""Makeup"",""Wellness"",""Skincare"",""Hair Care""]",second_item_percentage_off,low,frequent,0.125,0.521,0.652
+21,Home & Lifestyle,Electronics,"[10,47,48]","[""General Accessories"",""Tech Accessories""]",second_item_percentage_off,high,moderate,0.145,0.522,0.741
+22,Electronics,Jewellery & Accessories,"[9,10,12,44]","[""Mobile Accessories"",""Leather Accessories"",""Wearable Accessories""]",percentage_off,medium,moderate,0.181,0.778,0.712
+23,Sportswear,Footwear,"[3,5,8,40]","[""Dress Shoes"",""Running Shoes""]",amount_off,high,moderate,0.094,0.611,0.65
+24,Beauty,Footwear,"[13,14,39]","[""Hair Care"",""Wellness"",""Bath & Body"",""Travel Essentials""]",bundle_amount_off,low,moderate,0.118,0.596,0.71
+25,Footwear,Books & Gifts,"[38,39,40,46]","[""Boots"",""Everyday Footwear"",""Shoe Care""]",percentage_off,medium,light,0.195,0.835,0.528
+26,Electronics,Department Store,"[9,11,50]","[""Mobile Plans"",""Seasonal Accessories"",""General Accessories""]",bundle_amount_off,low,moderate,0.237,0.676,0.765
+27,Department Store,Jewellery & Accessories,"[43,49,50]","[""Jewellery & Gifts"",""Fashion Accessories"",""Gift Items""]",amount_off,medium,very_frequent,0.075,0.764,0.685
+28,Sportswear,Jewellery & Accessories,"[3,7,43]","[""Yoga & Fitness"",""Training Accessories"",""Running Shoes""]",bundle_amount_off,medium,light,0.294,0.53,0.661
+29,Beauty,Jewellery & Accessories,"[13,45]","[""Travel Essentials"",""Skincare"",""Watches"",""Wellness""]",amount_off,low,very_frequent,0.194,0.686,0.629
+30,Fashion,Books & Gifts,"[23,28,34,46]","[""Denim"",""Fashion Accessories"",""Knitwear"",""Clothing Basics""]",second_item_percentage_off,low,very_frequent,0.235,0.686,0.788
+31,Beauty,Department Store,"[14,16,49]","[""Hair Care"",""Seasonal Accessories"",""Bath & Body""]",percentage_off,medium,moderate,0.253,0.782,0.361
+32,Electronics,Sportswear,"[2,9,11,12]","[""Yoga & Fitness"",""Outdoor Apparel"",""Outdoor Accessories"",""Running Shoes""]",percentage_off,medium,moderate,0.25,0.674,0.378
+33,Electronics,Sportswear,"[3,9,10]","[""Mobile Accessories"",""Outdoor Accessories"",""Yoga & Fitness""]",bundle_amount_off,low,light,0.113,0.718,0.699
+34,Fashion,Department Store,"[29,30,50]","[""Knitwear"",""Designer Items"",""Gift Items""]",amount_off,high,frequent,0.078,0.612,0.772
+35,Sportswear,Books & Gifts,"[2,4,46]","[""Sports Accessories"",""Puzzles & Games"",""Athletic Apparel""]",amount_off,medium,frequent,0.096,0.808,0.496
+36,Beauty,Books & Gifts,"[15,46]","[""Wellness"",""Books""]",second_item_percentage_off,medium,moderate,0.255,0.812,0.491
+37,Home & Lifestyle,Books & Gifts,"[46,47,48]","[""Reading Accessories"",""Fragrance"",""Puzzles & Games""]",second_item_percentage_off,medium,moderate,0.283,0.772,0.764
+38,Jewellery & Accessories,Department Store,"[42,44,50]","[""Jewellery & Gifts"",""Gift Items"",""Home Accessories""]",percentage_off,medium,moderate,0.168,0.606,0.78
+39,Home & Lifestyle,Beauty,"[13,47]","[""Fragrance"",""Kitchen Accessories"",""Home Storage""]",amount_off,high,light,0.241,0.735,0.592
+40,Footwear,Electronics,"[12,39,40]","[""Seasonal Footwear"",""Audio Accessories""]",second_item_percentage_off,low,frequent,0.099,0.748,0.459
+41,Fashion,Jewellery & Accessories,"[19,20,23,42]","[""Knitwear"",""Denim"",""Jewellery & Gifts""]",bundle_amount_off,high,light,0.206,0.7,0.408
+42,Home & Lifestyle,Fashion,"[32,47,48]","[""Clothing Basics"",""Workwear"",""Dresses""]",amount_off,medium,frequent,0.172,0.588,0.383
+43,Sportswear,Jewellery & Accessories,"[2,3,45]","[""Training Accessories"",""Leather Accessories"",""Sports Accessories""]",percentage_off,high,frequent,0.208,0.743,0.766
+44,Footwear,Sportswear,"[1,38,40]","[""Shoe Care"",""Running Shoes""]",amount_off,medium,frequent,0.285,0.538,0.685
+45,Beauty,Footwear,"[17,36]","[""Dress Shoes"",""Makeup""]",bundle_amount_off,medium,moderate,0.277,0.613,0.624
+46,Sportswear,Beauty,"[1,2,18]","[""Training Accessories"",""Athletic Apparel"",""Skincare""]",amount_off,medium,frequent,0.219,0.865,0.38
+47,Footwear,Electronics,"[10,36,37]","[""Casual Shoes"",""Sandals"",""Mobile Plans""]",percentage_off,high,moderate,0.29,0.81,0.681
+48,Jewellery & Accessories,Beauty,"[15,44,45]","[""Hair Care"",""Watches""]",amount_off,high,moderate,0.154,0.897,0.77
+49,Sportswear,Department Store,"[3,4,50]","[""Outdoor Apparel"",""Home Accessories"",""Athletic Apparel"",""Yoga & Fitness""]",percentage_off,high,light,0.218,0.7,0.741
+50,Fashion,Footwear,"[29,37]","[""Everyday Footwear"",""Seasonal Footwear"",""Casual Shoes""]",bundle_amount_off,high,light,0.101,0.777,0.73
+51,Fashion,Home & Lifestyle,"[20,28,47]","[""Clothing Basics"",""Home Storage"",""Workwear""]",second_item_percentage_off,low,frequent,0.192,0.722,0.762
+52,Fashion,Beauty,"[14,21,31]","[""Makeup"",""Fragrance"",""Clothing Basics"",""Knitwear""]",second_item_percentage_off,high,frequent,0.245,0.752,0.709
+53,Beauty,Fashion,"[13,35]","[""Bath & Body"",""Fashion Accessories""]",percentage_off,medium,moderate,0.233,0.859,0.589
+54,Home & Lifestyle,Sportswear,"[3,47]","[""Home Decor"",""Kitchen Accessories"",""Outdoor Accessories""]",amount_off,low,very_frequent,0.298,0.719,0.551
+55,Home & Lifestyle,Department Store,"[48,49]","[""Home Accessories"",""Beauty Gift Sets"",""Seasonal Merchandise""]",percentage_off,low,moderate,0.116,0.844,0.645
+56,Beauty,Department Store,"[15,18,49]","[""Beauty Gift Sets"",""Fragrance"",""Wellness""]",second_item_percentage_off,low,frequent,0.102,0.62,0.54
+57,Footwear,Department Store,"[36,37,50]","[""Designer Items"",""Seasonal Merchandise"",""Seasonal Footwear""]",amount_off,medium,moderate,0.285,0.59,0.732
+58,Fashion,Department Store,"[19,25,29,49]","[""Gift Items"",""Home Accessories""]",amount_off,medium,frequent,0.257,0.842,0.671
+59,Beauty,Electronics,"[12,13]","[""Audio Accessories"",""Makeup"",""Mobile Plans""]",second_item_percentage_off,high,very_frequent,0.106,0.765,0.359
+60,Beauty,Home & Lifestyle,"[17,47]","[""Home Accessories"",""Fragrance"",""Hair Care""]",amount_off,high,moderate,0.223,0.547,0.653
+61,Department Store,Electronics,"[10,49,50]","[""Seasonal Merchandise"",""Designer Items"",""Home Electronics"",""Mobile Plans""]",amount_off,high,frequent,0.143,0.804,0.745
+62,Sportswear,Books & Gifts,"[2,46]","[""Puzzles & Games"",""Outdoor Accessories"",""Outdoor Jackets""]",bundle_amount_off,high,frequent,0.231,0.633,0.406
+63,Beauty,Books & Gifts,"[13,18,46]","[""Books"",""Wellness"",""Reading Accessories""]",amount_off,low,frequent,0.253,0.814,0.634
+64,Fashion,Home & Lifestyle,"[28,48]","[""Fashion Accessories"",""Workwear"",""Denim""]",percentage_off,low,very_frequent,0.092,0.531,0.684
+65,Fashion,Books & Gifts,"[26,33,46]","[""Reading Accessories"",""Gift Items"",""Dresses"",""Clothing Basics""]",bundle_amount_off,low,frequent,0.207,0.788,0.701
+66,Electronics,Beauty,"[11,12,15]","[""Bath & Body"",""Makeup"",""Mobile Plans""]",bundle_amount_off,medium,frequent,0.131,0.556,0.571
+67,Beauty,Electronics,"[9,14,15,16]","[""Beauty Gift Sets"",""Skincare""]",amount_off,high,moderate,0.092,0.723,0.403
+68,Sportswear,Home & Lifestyle,"[4,6,47]","[""Athletic Tops"",""Training Accessories"",""Kitchen Accessories""]",second_item_percentage_off,high,moderate,0.121,0.811,0.481
+69,Footwear,Sportswear,"[7,39,40]","[""Athletic Apparel"",""Sandals"",""Boots"",""Outdoor Apparel""]",percentage_off,medium,moderate,0.228,0.798,0.38
+70,Fashion,Footwear,"[19,33,37]","[""Sneakers"",""Clothing Basics""]",bundle_amount_off,high,light,0.207,0.745,0.647
+71,Fashion,Electronics,"[12,30]","[""Fashion Accessories"",""Denim"",""Wearable Accessories""]",percentage_off,low,moderate,0.078,0.824,0.39
+72,Sportswear,Department Store,"[7,50]","[""Athletic Apparel"",""Designer Items"",""Home Accessories""]",bundle_amount_off,medium,light,0.073,0.58,0.745
+73,Books & Gifts,Sportswear,"[8,46]","[""Reading Accessories"",""Athletic Apparel""]",percentage_off,low,frequent,0.095,0.547,0.606
+74,Footwear,Sportswear,"[6,38,40]","[""Athletic Tops"",""Boots"",""Everyday Footwear""]",percentage_off,high,frequent,0.089,0.713,0.635
+75,Electronics,Sportswear,"[7,9,10,11]","[""Mobile Plans"",""Tech Accessories""]",second_item_percentage_off,low,light,0.229,0.763,0.378
+76,Electronics,Sportswear,"[6,9,10]","[""Outdoor Jackets"",""Outdoor Apparel""]",percentage_off,high,very_frequent,0.27,0.641,0.74
+77,Department Store,Jewellery & Accessories,"[45,49,50]","[""Jewellery & Gifts"",""Designer Items"",""Necklaces""]",second_item_percentage_off,high,light,0.235,0.711,0.542
+78,Sportswear,Jewellery & Accessories,"[4,7,42]","[""Running Shoes"",""Outdoor Accessories"",""Watches""]",bundle_amount_off,high,frequent,0.154,0.699,0.545
+79,Fashion,Home & Lifestyle,"[26,31,47]","[""Home Furnishings"",""Home Decor""]",second_item_percentage_off,low,light,0.133,0.616,0.475
+80,Fashion,Beauty,"[16,31,35]","[""Knitwear"",""Bath & Body"",""Beauty Gift Sets""]",second_item_percentage_off,high,moderate,0.155,0.547,0.572
+81,Jewellery & Accessories,Fashion,"[23,44]","[""Bracelets"",""Outerwear""]",percentage_off,medium,frequent,0.211,0.6,0.409
+82,Electronics,Beauty,"[9,11,12,16]","[""Mobile Plans"",""Home Electronics"",""Wellness""]",second_item_percentage_off,medium,moderate,0.3,0.645,0.661
+83,Sportswear,Department Store,"[1,3,50]","[""Gift Items"",""Training Accessories"",""Sports Accessories""]",bundle_amount_off,medium,frequent,0.187,0.747,0.715
+84,Beauty,Fashion,"[17,18,20]","[""Travel Essentials"",""Fragrance"",""Fashion Accessories"",""Hair Care""]",amount_off,high,moderate,0.196,0.741,0.451
+85,Sportswear,Home & Lifestyle,"[2,5,48]","[""Athletic Tops"",""Yoga & Fitness"",""Home Furnishings"",""Outdoor Apparel""]",bundle_amount_off,high,moderate,0.078,0.628,0.63
+86,Sportswear,Footwear,"[1,2,37]","[""Athletic Tops"",""Sneakers"",""Sandals""]",second_item_percentage_off,medium,moderate,0.262,0.592,0.752
+87,Fashion,Beauty,"[18,20,29,31]","[""Clothing Basics"",""Workwear"",""Wellness""]",percentage_off,medium,moderate,0.217,0.866,0.781
+88,Beauty,Department Store,"[15,50]","[""Beauty Gift Sets"",""Seasonal Accessories"",""Hair Care""]",amount_off,medium,frequent,0.18,0.559,0.61
+89,Home & Lifestyle,Department Store,"[47,48,49]","[""Home Storage"",""Gift Items""]",bundle_amount_off,high,moderate,0.194,0.683,0.738
+90,Footwear,Sportswear,"[7,38]","[""Seasonal Footwear"",""Sandals"",""Running Shoes"",""Everyday Footwear""]",second_item_percentage_off,medium,frequent,0.263,0.823,0.622
+91,Beauty,Jewellery & Accessories,"[15,17,41]","[""Leather Accessories"",""Makeup"",""Beauty Gift Sets""]",percentage_off,high,very_frequent,0.26,0.535,0.387
+92,Sportswear,Footwear,"[4,7,37]","[""Running Shoes"",""Boots"",""Everyday Footwear""]",percentage_off,low,frequent,0.158,0.874,0.671
+93,Sportswear,Department Store,"[1,5,8,49]","[""Beauty Gift Sets"",""Athletic Apparel""]",percentage_off,low,moderate,0.233,0.569,0.504
+94,Sportswear,Jewellery & Accessories,"[5,8,41]","[""Athletic Apparel"",""Running Shoes"",""Outdoor Jackets""]",amount_off,medium,light,0.187,0.525,0.592
+95,Jewellery & Accessories,Sportswear,"[6,42,44]","[""Athletic Tops"",""Watches"",""Yoga & Fitness"",""Necklaces""]",second_item_percentage_off,medium,light,0.198,0.726,0.43
+96,Beauty,Sportswear,"[3,13,15,18]","[""Outdoor Jackets"",""Hair Care"",""Outdoor Apparel"",""Travel Essentials""]",bundle_amount_off,low,moderate,0.294,0.557,0.657
+97,Footwear,Books & Gifts,"[36,38,39,46]","[""Seasonal Footwear"",""Dress Shoes"",""Sneakers""]",amount_off,medium,moderate,0.191,0.758,0.642
+98,Beauty,Sportswear,"[5,13,14]","[""Wellness"",""Athletic Tops"",""Makeup""]",second_item_percentage_off,low,moderate,0.13,0.55,0.423
+99,Beauty,Home & Lifestyle,"[13,18,48]","[""Home Storage"",""Fragrance""]",second_item_percentage_off,medium,frequent,0.184,0.846,0.382
+100,Beauty,Jewellery & Accessories,"[15,16,41]","[""Wellness"",""Skincare""]",amount_off,medium,frequent,0.203,0.726,0.46
+101,Beauty,Footwear,"[14,39]","[""Sneakers"",""Wellness"",""Hair Care""]",second_item_percentage_off,low,light,0.164,0.724,0.776
+102,Department Store,Sportswear,"[3,49,50]","[""Beauty Gift Sets"",""Designer Items"",""Running Shoes""]",amount_off,high,frequent,0.224,0.576,0.391
+103,Jewellery & Accessories,Footwear,"[39,42]","[""Everyday Footwear"",""Leather Accessories"",""Seasonal Footwear"",""Sandals""]",second_item_percentage_off,medium,moderate,0.189,0.562,0.56
+104,Books & Gifts,Fashion,"[34,46]","[""Gift Items"",""Clothing Basics"",""Reading Accessories""]",percentage_off,high,light,0.247,0.705,0.667
+105,Jewellery & Accessories,Footwear,"[40,44]","[""Bracelets"",""Boots""]",bundle_amount_off,high,very_frequent,0.124,0.745,0.75
+106,Books & Gifts,Electronics,"[10,46]","[""Mobile Accessories"",""Tech Accessories""]",bundle_amount_off,medium,very_frequent,0.284,0.834,0.658
+107,Jewellery & Accessories,Electronics,"[11,41,42,43]","[""Necklaces"",""Home Electronics"",""Mobile Plans"",""Watches""]",second_item_percentage_off,medium,light,0.191,0.606,0.598
+108,Sportswear,Footwear,"[1,7,39]","[""Sneakers"",""Running Shoes"",""Training Accessories"",""Athletic Apparel""]",percentage_off,medium,frequent,0.11,0.798,0.35
+109,Electronics,Jewellery & Accessories,"[10,11,42]","[""Audio Accessories"",""Tech Accessories"",""Home Electronics"",""Fashion Accessories""]",amount_off,high,very_frequent,0.127,0.868,0.423
+110,Footwear,Books & Gifts,"[36,37,39,46]","[""Puzzles & Games"",""Reading Accessories"",""Casual Shoes""]",percentage_off,medium,moderate,0.299,0.67,0.629
+111,Jewellery & Accessories,Fashion,"[30,43,44]","[""Clothing Basics"",""Outerwear"",""Leather Accessories"",""Jewellery & Gifts""]",amount_off,medium,frequent,0.207,0.861,0.465
+112,Beauty,Fashion,"[18,24]","[""Travel Essentials"",""Outerwear"",""Fashion Accessories""]",amount_off,high,moderate,0.112,0.565,0.498
+113,Fashion,Electronics,"[11,27]","[""Dresses"",""Knitwear"",""Mobile Plans""]",percentage_off,medium,light,0.208,0.743,0.633
+114,Beauty,Sportswear,"[2,17]","[""Athletic Apparel"",""Beauty Gift Sets"",""Outdoor Apparel"",""Running Shoes""]",second_item_percentage_off,medium,frequent,0.171,0.599,0.379
+115,Beauty,Electronics,"[11,17]","[""General Accessories"",""Makeup"",""Wellness""]",percentage_off,medium,light,0.286,0.895,0.688
+116,Department Store,Beauty,"[18,50]","[""Gift Items"",""Skincare"",""Travel Essentials""]",percentage_off,high,frequent,0.255,0.864,0.467
+117,Footwear,Books & Gifts,"[36,37,46]","[""Seasonal Footwear"",""Everyday Footwear"",""Books"",""Sandals""]",percentage_off,medium,moderate,0.21,0.781,0.406
+118,Footwear,Electronics,"[12,36,38]","[""Everyday Footwear"",""Home Electronics"",""Dress Shoes"",""Seasonal Footwear""]",bundle_amount_off,medium,light,0.11,0.523,0.452
+119,Fashion,Electronics,"[10,30]","[""Clothing Basics"",""Home Electronics"",""Wearable Accessories""]",percentage_off,medium,frequent,0.134,0.696,0.565
+120,Books & Gifts,Department Store,"[46,49]","[""Gift Items"",""Seasonal Merchandise"",""Reading Accessories""]",percentage_off,low,light,0.138,0.63,0.604
+121,Electronics,Footwear,"[11,12,36]","[""Audio Accessories"",""Casual Shoes"",""Shoe Care""]",percentage_off,high,light,0.26,0.621,0.588
+122,Fashion,Department Store,"[24,27,29,50]","[""Denim"",""Workwear"",""Dresses"",""Seasonal Merchandise""]",percentage_off,medium,light,0.208,0.556,0.769
+123,Jewellery & Accessories,Electronics,"[12,41,42]","[""Bracelets"",""Wearable Accessories"",""Tech Accessories"",""Watches""]",percentage_off,high,moderate,0.106,0.69,0.538
+124,Sportswear,Beauty,"[2,16]","[""Bath & Body"",""Outdoor Accessories""]",second_item_percentage_off,high,light,0.125,0.53,0.377
+125,Home & Lifestyle,Department Store,"[47,48,50]","[""Seasonal Accessories"",""Gift Items""]",amount_off,medium,frequent,0.21,0.848,0.476
+126,Beauty,Fashion,"[16,32]","[""Skincare"",""Dresses"",""Workwear"",""Bath & Body""]",second_item_percentage_off,low,moderate,0.155,0.571,0.594
+127,Jewellery & Accessories,Footwear,"[37,41,43]","[""Necklaces"",""Boots""]",amount_off,medium,light,0.129,0.685,0.393
+128,Fashion,Jewellery & Accessories,"[21,28,30,41]","[""Necklaces"",""Dresses"",""Watches""]",amount_off,high,light,0.16,0.834,0.718
+129,Department Store,Home & Lifestyle,"[48,49,50]","[""Designer Items"",""Seasonal Accessories"",""Home Accessories""]",percentage_off,low,moderate,0.072,0.857,0.639
+130,Fashion,Books & Gifts,"[24,32,33,46]","[""Puzzles & Games"",""Dresses"",""Outerwear""]",amount_off,medium,moderate,0.095,0.564,0.492
+131,Beauty,Department Store,"[15,18,49]","[""Designer Items"",""Seasonal Merchandise""]",bundle_amount_off,high,light,0.194,0.865,0.388
+132,Electronics,Jewellery & Accessories,"[10,11,42]","[""Fashion Accessories"",""Bracelets"",""Wearable Accessories""]",second_item_percentage_off,low,moderate,0.24,0.726,0.799
+133,Books & Gifts,Department Store,"[46,49]","[""Puzzles & Games"",""Seasonal Merchandise"",""Gift Items""]",second_item_percentage_off,low,very_frequent,0.265,0.6,0.754
+134,Fashion,Department Store,"[26,27,32,50]","[""Denim"",""Seasonal Accessories""]",amount_off,medium,moderate,0.212,0.825,0.491
+135,Fashion,Jewellery & Accessories,"[27,29,35,42]","[""Workwear"",""Dresses"",""Leather Accessories""]",second_item_percentage_off,medium,moderate,0.174,0.548,0.72
+136,Beauty,Fashion,"[15,17,34]","[""Outerwear"",""Knitwear""]",amount_off,high,light,0.249,0.766,0.685
+137,Footwear,Department Store,"[38,50]","[""Home Accessories"",""Shoe Care"",""Beauty Gift Sets""]",amount_off,medium,moderate,0.073,0.837,0.743
+138,Fashion,Home & Lifestyle,"[20,48]","[""Outerwear"",""Fragrance"",""Denim""]",second_item_percentage_off,low,frequent,0.166,0.551,0.365
+139,Jewellery & Accessories,Footwear,"[37,41,42]","[""Seasonal Footwear"",""Leather Accessories"",""Casual Shoes"",""Earrings""]",second_item_percentage_off,low,light,0.274,0.88,0.698
+140,Sportswear,Beauty,"[2,8,14]","[""Skincare"",""Wellness"",""Running Shoes"",""Makeup""]",percentage_off,high,moderate,0.264,0.754,0.534
+141,Books & Gifts,Footwear,"[39,46]","[""Gift Items"",""Seasonal Footwear""]",percentage_off,medium,moderate,0.254,0.619,0.744
+142,Beauty,Footwear,"[13,15,40]","[""Boots"",""Casual Shoes"",""Beauty Gift Sets""]",amount_off,medium,moderate,0.269,0.634,0.755
+143,Footwear,Home & Lifestyle,"[36,37,38,48]","[""Home Accessories"",""Home Storage"",""Home Furnishings"",""Seasonal Footwear""]",second_item_percentage_off,medium,frequent,0.233,0.54,0.599
+144,Jewellery & Accessories,Electronics,"[10,43]","[""Leather Accessories"",""Jewellery & Gifts"",""Mobile Accessories""]",amount_off,medium,moderate,0.204,0.661,0.553
+145,Fashion,Sportswear,"[6,31]","[""Sports Accessories"",""Outdoor Apparel""]",amount_off,low,very_frequent,0.084,0.551,0.583
+146,Beauty,Department Store,"[14,18,49]","[""Hair Care"",""Designer Items""]",percentage_off,low,light,0.187,0.656,0.498
+147,Jewellery & Accessories,Electronics,"[10,45]","[""General Accessories"",""Home Electronics"",""Earrings""]",bundle_amount_off,medium,light,0.176,0.806,0.638
+148,Fashion,Electronics,"[12,22,27]","[""Fashion Accessories"",""Denim""]",second_item_percentage_off,high,frequent,0.09,0.741,0.748
+149,Fashion,Beauty,"[18,32]","[""Fashion Accessories"",""Hair Care""]",percentage_off,high,frequent,0.22,0.89,0.743
+150,Books & Gifts,Electronics,"[9,46]","[""General Accessories"",""Audio Accessories"",""Home Electronics"",""Reading Accessories""]",second_item_percentage_off,high,light,0.131,0.539,0.776
+151,Fashion,Electronics,"[12,21,29,32]","[""Knitwear"",""Home Electronics"",""Mobile Accessories"",""Outerwear""]",bundle_amount_off,medium,moderate,0.179,0.71,0.487
+152,Beauty,Jewellery & Accessories,"[14,17,41]","[""Wellness"",""Beauty Gift Sets""]",bundle_amount_off,high,frequent,0.178,0.759,0.435
+153,Beauty,Sportswear,"[6,14]","[""Athletic Apparel"",""Makeup"",""Yoga & Fitness""]",bundle_amount_off,low,frequent,0.089,0.653,0.546
+154,Fashion,Home & Lifestyle,"[24,25,47]","[""Workwear"",""Denim"",""Outerwear""]",second_item_percentage_off,medium,very_frequent,0.089,0.575,0.408
+155,Sportswear,Fashion,"[3,4,30]","[""Dresses"",""Yoga & Fitness"",""Athletic Tops""]",amount_off,medium,light,0.163,0.8,0.444
+156,Beauty,Sportswear,"[8,14,16,17]","[""Athletic Apparel"",""Outdoor Apparel""]",second_item_percentage_off,medium,moderate,0.178,0.565,0.556
+157,Jewellery & Accessories,Electronics,"[11,41,42,45]","[""Jewellery & Gifts"",""Bracelets"",""General Accessories""]",bundle_amount_off,high,light,0.106,0.752,0.401
+158,Jewellery & Accessories,Home & Lifestyle,"[41,45,48]","[""Fragrance"",""Leather Accessories""]",amount_off,medium,very_frequent,0.07,0.839,0.444
+159,Fashion,Books & Gifts,"[19,31,46]","[""Dresses"",""Knitwear"",""Books""]",percentage_off,medium,frequent,0.286,0.609,0.593
+160,Fashion,Home & Lifestyle,"[24,35,47]","[""Home Accessories"",""Workwear""]",second_item_percentage_off,low,moderate,0.118,0.635,0.386
+161,Beauty,Fashion,"[14,16,21]","[""Skincare"",""Denim""]",bundle_amount_off,medium,light,0.206,0.708,0.554
+162,Fashion,Department Store,"[33,49]","[""Fashion Accessories"",""Seasonal Accessories"",""Designer Items"",""Beauty Gift Sets""]",bundle_amount_off,high,moderate,0.078,0.849,0.487
+163,Sportswear,Beauty,"[3,6,13]","[""Yoga & Fitness"",""Makeup"",""Outdoor Accessories"",""Training Accessories""]",amount_off,high,frequent,0.108,0.867,0.662
+164,Books & Gifts,Home & Lifestyle,"[46,48]","[""Home Storage"",""Reading Accessories"",""Home Decor"",""Puzzles & Games""]",second_item_percentage_off,high,frequent,0.245,0.849,0.601
+165,Footwear,Electronics,"[9,36,37,39]","[""Wearable Accessories"",""Shoe Care"",""Mobile Accessories""]",bundle_amount_off,low,moderate,0.258,0.836,0.404
+166,Footwear,Department Store,"[39,40,49]","[""Seasonal Accessories"",""Everyday Footwear"",""Seasonal Footwear"",""Casual Shoes""]",amount_off,low,light,0.271,0.821,0.521
+167,Fashion,Sportswear,"[4,21,34]","[""Outdoor Accessories"",""Sports Accessories"",""Training Accessories""]",amount_off,low,light,0.133,0.636,0.462
+168,Home & Lifestyle,Footwear,"[40,47,48]","[""Home Furnishings"",""Shoe Care"",""Dress Shoes"",""Sneakers""]",amount_off,high,moderate,0.256,0.844,0.671
+169,Beauty,Sportswear,"[2,14,18]","[""Travel Essentials"",""Hair Care"",""Yoga & Fitness""]",bundle_amount_off,high,light,0.102,0.65,0.44
+170,Electronics,Home & Lifestyle,"[10,48]","[""Audio Accessories"",""Fragrance"",""Home Electronics""]",percentage_off,low,moderate,0.236,0.773,0.461
+171,Home & Lifestyle,Electronics,"[9,48]","[""Home Storage"",""Fragrance"",""Audio Accessories""]",second_item_percentage_off,medium,moderate,0.292,0.559,0.742
+172,Home & Lifestyle,Footwear,"[40,47,48]","[""Kitchen Accessories"",""Sandals""]",amount_off,medium,moderate,0.17,0.788,0.634
+173,Jewellery & Accessories,Books & Gifts,"[42,46]","[""Watches"",""Fashion Accessories"",""Necklaces"",""Puzzles & Games""]",second_item_percentage_off,high,very_frequent,0.24,0.718,0.654
+174,Books & Gifts,Department Store,"[46,49]","[""Seasonal Accessories"",""Designer Items"",""Beauty Gift Sets"",""Seasonal Merchandise""]",percentage_off,medium,light,0.177,0.579,0.463
+175,Jewellery & Accessories,Books & Gifts,"[41,42,45,46]","[""Gift Items"",""Watches"",""Fashion Accessories"",""Jewellery & Gifts""]",second_item_percentage_off,medium,moderate,0.28,0.705,0.536
+176,Electronics,Beauty,"[9,10,11,14]","[""Wellness"",""Tech Accessories"",""Beauty Gift Sets"",""Mobile Plans""]",amount_off,low,light,0.216,0.828,0.465
+177,Sportswear,Electronics,"[3,5,9]","[""Sports Accessories"",""Outdoor Accessories"",""Outdoor Apparel""]",amount_off,medium,light,0.087,0.604,0.674
+178,Jewellery & Accessories,Home & Lifestyle,"[41,42,43,47]","[""Home Decor"",""Watches"",""Necklaces""]",second_item_percentage_off,high,frequent,0.159,0.563,0.791
+179,Jewellery & Accessories,Department Store,"[43,44,50]","[""Leather Accessories"",""Bracelets""]",second_item_percentage_off,low,frequent,0.132,0.836,0.719
+180,Sportswear,Books & Gifts,"[2,4,6,46]","[""Outdoor Jackets"",""Athletic Tops"",""Athletic Apparel""]",second_item_percentage_off,high,moderate,0.164,0.893,0.438
+181,Fashion,Footwear,"[25,32,37]","[""Boots"",""Dress Shoes"",""Denim"",""Sandals""]",percentage_off,medium,frequent,0.138,0.757,0.429
+182,Home & Lifestyle,Department Store,"[47,48,49]","[""Fragrance"",""Seasonal Merchandise"",""Beauty Gift Sets""]",second_item_percentage_off,medium,moderate,0.109,0.749,0.597
+183,Beauty,Electronics,"[9,16,17]","[""Hair Care"",""Wearable Accessories"",""Travel Essentials""]",amount_off,low,frequent,0.229,0.618,0.485
+184,Home & Lifestyle,Jewellery & Accessories,"[45,47,48]","[""Home Storage"",""Earrings"",""Home Furnishings"",""Home Accessories""]",percentage_off,medium,light,0.075,0.808,0.596
+185,Sportswear,Footwear,"[3,37]","[""Boots"",""Everyday Footwear"",""Outdoor Apparel"",""Casual Shoes""]",bundle_amount_off,high,light,0.1,0.567,0.529
+186,Jewellery & Accessories,Footwear,"[39,41,43]","[""Watches"",""Sneakers"",""Shoe Care""]",amount_off,medium,light,0.273,0.757,0.463
+187,Footwear,Sportswear,"[5,40]","[""Athletic Tops"",""Sneakers"",""Everyday Footwear"",""Shoe Care""]",second_item_percentage_off,medium,moderate,0.204,0.529,0.708
+188,Sportswear,Footwear,"[4,37]","[""Everyday Footwear"",""Casual Shoes"",""Boots""]",amount_off,low,moderate,0.209,0.523,0.591
+189,Fashion,Beauty,"[18,27,30,32]","[""Fashion Accessories"",""Beauty Gift Sets"",""Clothing Basics""]",amount_off,high,light,0.289,0.67,0.76
+190,Home & Lifestyle,Books & Gifts,"[46,47,48]","[""Home Decor"",""Home Accessories"",""Reading Accessories""]",amount_off,medium,very_frequent,0.17,0.558,0.493
+191,Beauty,Home & Lifestyle,"[16,18,47]","[""Beauty Gift Sets"",""Skincare"",""Makeup""]",percentage_off,high,light,0.094,0.668,0.793
+192,Sportswear,Beauty,"[4,8,18]","[""Yoga & Fitness"",""Athletic Tops"",""Skincare"",""Running Shoes""]",percentage_off,low,moderate,0.257,0.67,0.623
+193,Sportswear,Electronics,"[1,12]","[""Audio Accessories"",""Athletic Apparel"",""Yoga & Fitness""]",bundle_amount_off,high,frequent,0.228,0.531,0.453
+194,Sportswear,Electronics,"[3,6,7,11]","[""Wearable Accessories"",""Athletic Tops"",""Tech Accessories"",""Training Accessories""]",amount_off,high,light,0.283,0.605,0.563
+195,Beauty,Department Store,"[13,18,50]","[""Skincare"",""Fragrance"",""Seasonal Merchandise""]",bundle_amount_off,low,frequent,0.231,0.842,0.605
+196,Sportswear,Beauty,"[7,8,16]","[""Outdoor Accessories"",""Yoga & Fitness"",""Athletic Apparel"",""Bath & Body""]",percentage_off,medium,moderate,0.089,0.866,0.353
+197,Sportswear,Jewellery & Accessories,"[4,5,6,43]","[""Fashion Accessories"",""Watches"",""Outdoor Jackets""]",bundle_amount_off,high,moderate,0.167,0.586,0.65
+198,Beauty,Jewellery & Accessories,"[14,15,43]","[""Fashion Accessories"",""Necklaces""]",amount_off,medium,light,0.153,0.549,0.378
+199,Fashion,Electronics,"[12,22,26,29]","[""Wearable Accessories"",""General Accessories"",""Home Electronics"",""Mobile Plans""]",second_item_percentage_off,high,moderate,0.255,0.677,0.789
+200,Fashion,Jewellery & Accessories,"[35,41]","[""Denim"",""Dresses"",""Necklaces""]",second_item_percentage_off,medium,frequent,0.147,0.831,0.55
+201,Sportswear,Footwear,"[3,6,7,37]","[""Boots"",""Shoe Care"",""Yoga & Fitness""]",second_item_percentage_off,high,light,0.161,0.761,0.636
+202,Fashion,Electronics,"[10,28,31]","[""Mobile Plans"",""Workwear"",""Tech Accessories"",""Denim""]",second_item_percentage_off,medium,moderate,0.22,0.637,0.384
+203,Footwear,Home & Lifestyle,"[36,47]","[""Sneakers"",""Boots""]",amount_off,medium,frequent,0.243,0.599,0.527
+204,Sportswear,Jewellery & Accessories,"[5,45]","[""Outdoor Accessories"",""Outdoor Apparel"",""Fashion Accessories"",""Bracelets""]",amount_off,medium,moderate,0.095,0.634,0.72
+205,Beauty,Electronics,"[11,16]","[""Mobile Plans"",""Travel Essentials"",""Audio Accessories"",""Bath & Body""]",amount_off,medium,light,0.146,0.809,0.711
+206,Sportswear,Beauty,"[2,6,8,16]","[""Bath & Body"",""Outdoor Accessories"",""Sports Accessories"",""Skincare""]",second_item_percentage_off,medium,moderate,0.133,0.75,0.418
+207,Fashion,Jewellery & Accessories,"[24,26,45]","[""Necklaces"",""Dresses"",""Bracelets""]",second_item_percentage_off,medium,frequent,0.254,0.766,0.49
+208,Jewellery & Accessories,Footwear,"[39,43,44,45]","[""Necklaces"",""Everyday Footwear""]",percentage_off,medium,very_frequent,0.274,0.609,0.482
+209,Fashion,Home & Lifestyle,"[27,48]","[""Fashion Accessories"",""Kitchen Accessories""]",amount_off,high,moderate,0.085,0.882,0.624
+210,Jewellery & Accessories,Department Store,"[41,42,45,49]","[""Necklaces"",""Earrings""]",second_item_percentage_off,medium,moderate,0.278,0.836,0.666
+211,Sportswear,Fashion,"[6,8,24]","[""Athletic Tops"",""Athletic Apparel""]",amount_off,medium,light,0.208,0.689,0.483
+212,Jewellery & Accessories,Home & Lifestyle,"[41,45,47]","[""Leather Accessories"",""Home Furnishings"",""Kitchen Accessories"",""Earrings""]",amount_off,high,moderate,0.138,0.895,0.426
+213,Sportswear,Department Store,"[3,49]","[""Training Accessories"",""Home Accessories"",""Yoga & Fitness"",""Running Shoes""]",amount_off,medium,frequent,0.194,0.703,0.418
+214,Footwear,Home & Lifestyle,"[37,40,48]","[""Everyday Footwear"",""Shoe Care"",""Boots"",""Kitchen Accessories""]",second_item_percentage_off,medium,light,0.096,0.671,0.427
+215,Sportswear,Books & Gifts,"[4,5,46]","[""Running Shoes"",""Athletic Apparel""]",second_item_percentage_off,medium,moderate,0.246,0.793,0.567
+216,Sportswear,Beauty,"[3,5,17]","[""Athletic Tops"",""Outdoor Apparel"",""Bath & Body""]",second_item_percentage_off,medium,very_frequent,0.247,0.734,0.757
+217,Home & Lifestyle,Department Store,"[47,48,49]","[""Beauty Gift Sets"",""Designer Items"",""Gift Items""]",amount_off,medium,light,0.205,0.893,0.487
+218,Footwear,Books & Gifts,"[38,39,46]","[""Sandals"",""Books""]",percentage_off,medium,light,0.265,0.884,0.626
+219,Home & Lifestyle,Footwear,"[38,47]","[""Everyday Footwear"",""Casual Shoes"",""Home Storage""]",amount_off,medium,light,0.296,0.584,0.685
+220,Jewellery & Accessories,Department Store,"[43,50]","[""Home Accessories"",""Beauty Gift Sets"",""Necklaces""]",percentage_off,medium,frequent,0.201,0.526,0.472
+221,Sportswear,Home & Lifestyle,"[3,5,47]","[""Kitchen Accessories"",""Athletic Tops"",""Sports Accessories""]",amount_off,medium,moderate,0.222,0.874,0.442
+222,Jewellery & Accessories,Home & Lifestyle,"[41,43,47]","[""Home Storage"",""Fragrance"",""Bracelets""]",bundle_amount_off,medium,light,0.223,0.659,0.446
+223,Beauty,Home & Lifestyle,"[13,14,16,47]","[""Home Decor"",""Kitchen Accessories"",""Home Furnishings""]",percentage_off,medium,moderate,0.282,0.698,0.718
+224,Sportswear,Home & Lifestyle,"[4,5,6,47]","[""Home Storage"",""Running Shoes"",""Athletic Apparel""]",bundle_amount_off,medium,light,0.216,0.721,0.645
+225,Electronics,Books & Gifts,"[10,11,12,46]","[""Audio Accessories"",""Books"",""Gift Items""]",percentage_off,medium,frequent,0.161,0.728,0.453
+226,Home & Lifestyle,Footwear,"[39,47,48]","[""Sandals"",""Home Furnishings"",""Seasonal Footwear""]",bundle_amount_off,medium,moderate,0.13,0.764,0.37
+227,Home & Lifestyle,Footwear,"[38,47,48]","[""Shoe Care"",""Fragrance"",""Seasonal Footwear"",""Boots""]",second_item_percentage_off,medium,moderate,0.215,0.778,0.403
+228,Sportswear,Beauty,"[8,18]","[""Yoga & Fitness"",""Athletic Tops"",""Makeup""]",percentage_off,medium,frequent,0.275,0.781,0.586
+229,Fashion,Beauty,"[14,22]","[""Makeup"",""Bath & Body""]",amount_off,high,moderate,0.216,0.854,0.696
+230,Jewellery & Accessories,Home & Lifestyle,"[44,48]","[""Watches"",""Home Accessories"",""Jewellery & Gifts""]",amount_off,high,light,0.124,0.862,0.539
+231,Fashion,Beauty,"[14,23,25,31]","[""Dresses"",""Makeup"",""Bath & Body""]",amount_off,low,frequent,0.278,0.548,0.47
+232,Electronics,Jewellery & Accessories,"[9,45]","[""Earrings"",""Audio Accessories"",""Mobile Accessories""]",bundle_amount_off,high,moderate,0.195,0.625,0.542
+233,Fashion,Books & Gifts,"[25,29,46]","[""Dresses"",""Workwear"",""Books""]",percentage_off,medium,frequent,0.111,0.722,0.663
+234,Footwear,Electronics,"[9,38,39,40]","[""Seasonal Footwear"",""Casual Shoes"",""Dress Shoes""]",bundle_amount_off,low,moderate,0.124,0.562,0.495
+235,Department Store,Fashion,"[35,49,50]","[""Gift Items"",""Dresses"",""Clothing Basics""]",bundle_amount_off,high,frequent,0.188,0.646,0.581
+236,Fashion,Beauty,"[14,22,28]","[""Knitwear"",""Skincare"",""Makeup""]",second_item_percentage_off,high,moderate,0.183,0.805,0.469
+237,Home & Lifestyle,Sportswear,"[5,47,48]","[""Training Accessories"",""Outdoor Jackets"",""Yoga & Fitness""]",percentage_off,medium,frequent,0.289,0.784,0.541
+238,Department Store,Beauty,"[14,49]","[""Travel Essentials"",""Designer Items"",""Makeup""]",percentage_off,high,moderate,0.225,0.642,0.668
+239,Footwear,Beauty,"[16,36,37]","[""Wellness"",""Sneakers"",""Fragrance""]",percentage_off,medium,frequent,0.294,0.762,0.384
+240,Electronics,Books & Gifts,"[9,11,46]","[""Tech Accessories"",""Reading Accessories"",""Audio Accessories""]",percentage_off,medium,moderate,0.131,0.896,0.602
+241,Electronics,Books & Gifts,"[9,11,12,46]","[""Puzzles & Games"",""Home Electronics"",""General Accessories"",""Reading Accessories""]",amount_off,medium,light,0.188,0.797,0.578
+242,Beauty,Jewellery & Accessories,"[16,17,42]","[""Hair Care"",""Travel Essentials"",""Bracelets""]",percentage_off,high,moderate,0.202,0.671,0.614
+243,Sportswear,Beauty,"[2,4,8,15]","[""Makeup"",""Outdoor Accessories""]",second_item_percentage_off,high,very_frequent,0.214,0.84,0.375
+244,Footwear,Electronics,"[9,37,40]","[""Wearable Accessories"",""Boots"",""Dress Shoes"",""Shoe Care""]",bundle_amount_off,medium,light,0.115,0.581,0.541
+245,Footwear,Electronics,"[9,36,40]","[""Sneakers"",""General Accessories""]",percentage_off,high,moderate,0.117,0.738,0.517
+246,Department Store,Sportswear,"[8,49,50]","[""Outdoor Accessories"",""Yoga & Fitness"",""Home Accessories""]",bundle_amount_off,low,light,0.247,0.67,0.519
+247,Footwear,Books & Gifts,"[36,38,40,46]","[""Seasonal Footwear"",""Books"",""Gift Items""]",bundle_amount_off,high,moderate,0.221,0.798,0.527
+248,Books & Gifts,Fashion,"[31,46]","[""Outerwear"",""Reading Accessories"",""Workwear"",""Knitwear""]",percentage_off,medium,very_frequent,0.075,0.641,0.61
+249,Sportswear,Books & Gifts,"[1,6,7,46]","[""Training Accessories"",""Athletic Tops"",""Gift Items""]",amount_off,low,moderate,0.284,0.828,0.409
+250,Beauty,Fashion,"[14,17,29]","[""Skincare"",""Wellness"",""Outerwear""]",amount_off,low,moderate,0.13,0.731,0.614
+251,Beauty,Fashion,"[13,17,30]","[""Travel Essentials"",""Beauty Gift Sets""]",second_item_percentage_off,medium,light,0.168,0.55,0.673
+252,Beauty,Department Store,"[17,49]","[""Skincare"",""Seasonal Merchandise"",""Wellness""]",percentage_off,medium,very_frequent,0.083,0.754,0.65
+253,Footwear,Fashion,"[33,37,39]","[""Sneakers"",""Boots"",""Outerwear"",""Clothing Basics""]",percentage_off,low,light,0.121,0.878,0.786
+254,Fashion,Sportswear,"[4,35]","[""Athletic Tops"",""Denim"",""Yoga & Fitness"",""Training Accessories""]",bundle_amount_off,medium,moderate,0.082,0.84,0.511
+255,Beauty,Jewellery & Accessories,"[13,14,18,45]","[""Leather Accessories"",""Travel Essentials"",""Earrings""]",percentage_off,high,light,0.287,0.753,0.605
+256,Jewellery & Accessories,Books & Gifts,"[41,44,45,46]","[""Jewellery & Gifts"",""Reading Accessories"",""Gift Items""]",percentage_off,low,very_frequent,0.132,0.818,0.71
+257,Jewellery & Accessories,Sportswear,"[7,41,43]","[""Bracelets"",""Athletic Apparel""]",percentage_off,medium,frequent,0.232,0.605,0.73
+258,Sportswear,Jewellery & Accessories,"[1,4,41]","[""Bracelets"",""Watches""]",amount_off,medium,light,0.186,0.689,0.439
+259,Sportswear,Jewellery & Accessories,"[3,5,41]","[""Athletic Tops"",""Necklaces"",""Training Accessories""]",bundle_amount_off,medium,moderate,0.132,0.88,0.787
+260,Sportswear,Fashion,"[3,6,7,26]","[""Outerwear"",""Denim""]",second_item_percentage_off,medium,moderate,0.245,0.724,0.604
+261,Sportswear,Footwear,"[6,7,36]","[""Sneakers"",""Dress Shoes"",""Outdoor Jackets"",""Casual Shoes""]",bundle_amount_off,high,very_frequent,0.275,0.603,0.736
+262,Books & Gifts,Home & Lifestyle,"[46,48]","[""Home Furnishings"",""Reading Accessories"",""Home Decor""]",amount_off,low,frequent,0.222,0.763,0.58
+263,Fashion,Jewellery & Accessories,"[28,29,41]","[""Clothing Basics"",""Knitwear""]",amount_off,medium,light,0.13,0.718,0.591
+264,Fashion,Home & Lifestyle,"[29,48]","[""Clothing Basics"",""Home Accessories"",""Fragrance""]",second_item_percentage_off,medium,moderate,0.231,0.694,0.375
+265,Jewellery & Accessories,Home & Lifestyle,"[44,45,47]","[""Home Accessories"",""Watches"",""Earrings"",""Jewellery & Gifts""]",amount_off,high,frequent,0.268,0.747,0.484
+266,Fashion,Books & Gifts,"[21,22,32,46]","[""Reading Accessories"",""Denim"",""Knitwear"",""Dresses""]",bundle_amount_off,medium,light,0.084,0.728,0.766
+267,Department Store,Footwear,"[36,49,50]","[""Boots"",""Seasonal Accessories""]",second_item_percentage_off,high,moderate,0.296,0.53,0.389
+268,Books & Gifts,Sportswear,"[7,46]","[""Outdoor Accessories"",""Training Accessories""]",bundle_amount_off,low,frequent,0.213,0.652,0.65
+269,Fashion,Beauty,"[17,20]","[""Fragrance"",""Clothing Basics"",""Knitwear""]",amount_off,medium,light,0.242,0.548,0.462
+270,Fashion,Electronics,"[10,32]","[""Wearable Accessories"",""Outerwear""]",second_item_percentage_off,medium,frequent,0.114,0.857,0.584
+271,Fashion,Electronics,"[10,31,33]","[""Home Electronics"",""General Accessories"",""Fashion Accessories""]",bundle_amount_off,medium,light,0.173,0.867,0.698
+272,Footwear,Books & Gifts,"[36,37,46]","[""Sneakers"",""Shoe Care"",""Everyday Footwear""]",percentage_off,medium,moderate,0.255,0.808,0.479
+273,Beauty,Electronics,"[10,14,16,17]","[""Wellness"",""Skincare""]",bundle_amount_off,medium,light,0.259,0.587,0.57
+274,Footwear,Jewellery & Accessories,"[36,38,39,44]","[""Shoe Care"",""Watches"",""Sandals"",""Seasonal Footwear""]",amount_off,low,moderate,0.168,0.891,0.477
+275,Electronics,Footwear,"[9,11,40]","[""Dress Shoes"",""Sandals"",""Tech Accessories"",""Everyday Footwear""]",amount_off,high,light,0.132,0.805,0.379
+276,Fashion,Home & Lifestyle,"[29,32,47]","[""Workwear"",""Home Decor"",""Home Accessories""]",percentage_off,high,moderate,0.252,0.792,0.413
+277,Jewellery & Accessories,Fashion,"[23,44,45]","[""Watches"",""Clothing Basics"",""Earrings"",""Fashion Accessories""]",second_item_percentage_off,low,frequent,0.288,0.662,0.466
+278,Sportswear,Department Store,"[5,50]","[""Outdoor Accessories"",""Sports Accessories"",""Training Accessories"",""Designer Items""]",percentage_off,low,moderate,0.21,0.657,0.625
+279,Beauty,Department Store,"[16,17,50]","[""Skincare"",""Home Accessories""]",amount_off,high,moderate,0.291,0.733,0.452
+280,Books & Gifts,Department Store,"[46,50]","[""Home Accessories"",""Books"",""Puzzles & Games""]",amount_off,high,light,0.198,0.571,0.799
+281,Books & Gifts,Fashion,"[34,46]","[""Books"",""Denim""]",amount_off,low,light,0.263,0.724,0.794
+282,Fashion,Books & Gifts,"[20,46]","[""Clothing Basics"",""Fashion Accessories"",""Gift Items"",""Knitwear""]",second_item_percentage_off,high,light,0.166,0.858,0.402
+283,Footwear,Beauty,"[17,36,39]","[""Travel Essentials"",""Shoe Care"",""Casual Shoes""]",amount_off,medium,moderate,0.071,0.773,0.652
+284,Sportswear,Fashion,"[3,4,27]","[""Dresses"",""Fashion Accessories"",""Clothing Basics"",""Athletic Apparel""]",amount_off,medium,light,0.088,0.726,0.773
+285,Electronics,Fashion,"[9,11,33]","[""General Accessories"",""Clothing Basics"",""Dresses""]",bundle_amount_off,high,moderate,0.298,0.539,0.503
+286,Jewellery & Accessories,Books & Gifts,"[41,46]","[""Bracelets"",""Necklaces""]",bundle_amount_off,medium,moderate,0.112,0.657,0.408
+287,Jewellery & Accessories,Beauty,"[17,41,42]","[""Makeup"",""Bracelets"",""Beauty Gift Sets""]",percentage_off,low,very_frequent,0.248,0.888,0.363
+288,Footwear,Home & Lifestyle,"[38,39,48]","[""Seasonal Footwear"",""Sandals"",""Home Accessories""]",second_item_percentage_off,low,moderate,0.1,0.733,0.595
+289,Jewellery & Accessories,Footwear,"[37,44,45]","[""Necklaces"",""Seasonal Footwear"",""Casual Shoes"",""Fashion Accessories""]",amount_off,medium,frequent,0.286,0.839,0.362
+290,Footwear,Beauty,"[15,39]","[""Beauty Gift Sets"",""Bath & Body"",""Travel Essentials"",""Dress Shoes""]",bundle_amount_off,low,frequent,0.163,0.637,0.72
+291,Books & Gifts,Department Store,"[46,50]","[""Reading Accessories"",""Seasonal Merchandise"",""Beauty Gift Sets"",""Seasonal Accessories""]",percentage_off,low,moderate,0.135,0.742,0.762
+292,Sportswear,Department Store,"[1,4,49]","[""Outdoor Accessories"",""Outdoor Jackets"",""Athletic Apparel"",""Beauty Gift Sets""]",amount_off,high,moderate,0.239,0.591,0.515
+293,Department Store,Home & Lifestyle,"[48,49,50]","[""Seasonal Accessories"",""Home Decor""]",percentage_off,high,frequent,0.235,0.59,0.781
+294,Fashion,Beauty,"[17,21,32]","[""Hair Care"",""Fashion Accessories"",""Bath & Body""]",second_item_percentage_off,high,frequent,0.206,0.875,0.427
+295,Footwear,Jewellery & Accessories,"[37,45]","[""Boots"",""Earrings"",""Everyday Footwear""]",second_item_percentage_off,low,moderate,0.106,0.83,0.443
+296,Fashion,Home & Lifestyle,"[20,22,29,48]","[""Denim"",""Fragrance"",""Dresses"",""Home Accessories""]",amount_off,medium,moderate,0.172,0.672,0.629
+297,Department Store,Home & Lifestyle,"[48,49,50]","[""Seasonal Accessories"",""Kitchen Accessories"",""Fragrance"",""Gift Items""]",bundle_amount_off,medium,moderate,0.075,0.68,0.454
+298,Footwear,Beauty,"[17,40]","[""Boots"",""Sneakers"",""Seasonal Footwear""]",second_item_percentage_off,medium,moderate,0.075,0.8,0.715
+299,Footwear,Electronics,"[10,36,37]","[""Sneakers"",""Everyday Footwear"",""Dress Shoes""]",bundle_amount_off,medium,moderate,0.219,0.801,0.36
+300,Books & Gifts,Fashion,"[24,46]","[""Puzzles & Games"",""Dresses"",""Workwear""]",percentage_off,medium,frequent,0.117,0.554,0.386
+301,Fashion,Footwear,"[22,23,37]","[""Fashion Accessories"",""Sneakers""]",amount_off,low,moderate,0.141,0.703,0.703
+302,Beauty,Books & Gifts,"[14,15,16,46]","[""Puzzles & Games"",""Gift Items""]",second_item_percentage_off,medium,light,0.253,0.767,0.36
+303,Jewellery & Accessories,Beauty,"[14,45]","[""Watches"",""Hair Care"",""Necklaces"",""Jewellery & Gifts""]",percentage_off,medium,very_frequent,0.186,0.585,0.528
+304,Department Store,Sportswear,"[4,49,50]","[""Training Accessories"",""Outdoor Jackets"",""Outdoor Apparel"",""Yoga & Fitness""]",amount_off,low,frequent,0.14,0.774,0.483
+305,Jewellery & Accessories,Electronics,"[12,43,45]","[""Leather Accessories"",""Wearable Accessories"",""Home Electronics"",""Mobile Plans""]",second_item_percentage_off,medium,very_frequent,0.095,0.892,0.659
+306,Jewellery & Accessories,Department Store,"[42,44,50]","[""Earrings"",""Fashion Accessories"",""Leather Accessories"",""Seasonal Accessories""]",amount_off,low,frequent,0.17,0.596,0.765
+307,Books & Gifts,Electronics,"[11,46]","[""General Accessories"",""Home Electronics"",""Puzzles & Games""]",second_item_percentage_off,high,moderate,0.217,0.651,0.559
+308,Beauty,Sportswear,"[1,18]","[""Running Shoes"",""Athletic Apparel""]",second_item_percentage_off,low,moderate,0.148,0.729,0.599
+309,Footwear,Home & Lifestyle,"[38,39,48]","[""Shoe Care"",""Boots"",""Everyday Footwear"",""Home Decor""]",amount_off,medium,light,0.082,0.521,0.353
+310,Footwear,Books & Gifts,"[39,46]","[""Dress Shoes"",""Casual Shoes"",""Gift Items""]",amount_off,high,frequent,0.224,0.805,0.469
+311,Footwear,Department Store,"[37,40,49]","[""Seasonal Footwear"",""Designer Items"",""Seasonal Merchandise""]",percentage_off,medium,light,0.273,0.883,0.617
+312,Beauty,Footwear,"[14,40]","[""Casual Shoes"",""Sneakers"",""Beauty Gift Sets""]",percentage_off,medium,light,0.255,0.648,0.463
+313,Jewellery & Accessories,Books & Gifts,"[42,46]","[""Reading Accessories"",""Bracelets"",""Earrings""]",percentage_off,high,frequent,0.194,0.861,0.414
+314,Jewellery & Accessories,Footwear,"[36,44]","[""Necklaces"",""Everyday Footwear"",""Shoe Care"",""Watches""]",bundle_amount_off,high,moderate,0.081,0.564,0.793
+315,Fashion,Beauty,"[16,29]","[""Beauty Gift Sets"",""Makeup"",""Outerwear""]",bundle_amount_off,medium,light,0.269,0.709,0.707
+316,Sportswear,Department Store,"[3,5,49]","[""Outdoor Apparel"",""Athletic Tops"",""Yoga & Fitness""]",second_item_percentage_off,high,light,0.205,0.693,0.473
+317,Footwear,Home & Lifestyle,"[38,40,48]","[""Home Decor"",""Fragrance"",""Sneakers""]",percentage_off,medium,frequent,0.2,0.546,0.744
+318,Beauty,Jewellery & Accessories,"[15,45]","[""Watches"",""Fragrance"",""Hair Care""]",second_item_percentage_off,high,light,0.135,0.659,0.561
+319,Electronics,Beauty,"[9,12,16]","[""Audio Accessories"",""General Accessories"",""Mobile Plans""]",bundle_amount_off,low,moderate,0.082,0.552,0.513
+320,Beauty,Home & Lifestyle,"[16,18,47]","[""Home Accessories"",""Kitchen Accessories"",""Makeup"",""Wellness""]",percentage_off,medium,light,0.193,0.656,0.491
+321,Footwear,Sportswear,"[8,38,39,40]","[""Seasonal Footwear"",""Athletic Tops"",""Sneakers"",""Dress Shoes""]",percentage_off,low,frequent,0.174,0.767,0.642
+322,Sportswear,Jewellery & Accessories,"[2,42]","[""Sports Accessories"",""Athletic Apparel""]",amount_off,high,moderate,0.21,0.7,0.528
+323,Beauty,Footwear,"[18,38]","[""Sandals"",""Boots""]",second_item_percentage_off,medium,moderate,0.152,0.629,0.669
+324,Electronics,Department Store,"[10,49]","[""Tech Accessories"",""Wearable Accessories"",""Home Accessories""]",bundle_amount_off,medium,moderate,0.078,0.85,0.352
+325,Fashion,Beauty,"[17,24,27]","[""Dresses"",""Denim"",""Outerwear""]",percentage_off,low,moderate,0.109,0.589,0.59
+326,Sportswear,Books & Gifts,"[3,4,46]","[""Gift Items"",""Outdoor Accessories"",""Yoga & Fitness"",""Running Shoes""]",second_item_percentage_off,high,frequent,0.204,0.783,0.387
+327,Footwear,Department Store,"[37,50]","[""Casual Shoes"",""Home Accessories"",""Sandals"",""Dress Shoes""]",bundle_amount_off,high,moderate,0.198,0.626,0.703
+328,Beauty,Fashion,"[15,16,17,20]","[""Wellness"",""Travel Essentials""]",percentage_off,high,light,0.244,0.69,0.691
+329,Sportswear,Footwear,"[7,40]","[""Running Shoes"",""Sports Accessories"",""Athletic Apparel"",""Training Accessories""]",second_item_percentage_off,medium,moderate,0.183,0.703,0.395
+330,Department Store,Jewellery & Accessories,"[42,49,50]","[""Beauty Gift Sets"",""Seasonal Accessories"",""Watches"",""Jewellery & Gifts""]",percentage_off,low,frequent,0.18,0.56,0.432
+331,Books & Gifts,Home & Lifestyle,"[46,47]","[""Books"",""Fragrance"",""Kitchen Accessories""]",amount_off,low,frequent,0.288,0.696,0.787
+332,Electronics,Books & Gifts,"[9,46]","[""Reading Accessories"",""General Accessories"",""Wearable Accessories"",""Mobile Plans""]",bundle_amount_off,low,light,0.252,0.836,0.686
+333,Footwear,Books & Gifts,"[37,40,46]","[""Boots"",""Gift Items"",""Dress Shoes""]",percentage_off,low,frequent,0.127,0.612,0.372
+334,Fashion,Electronics,"[11,21,23,28]","[""Mobile Plans"",""Dresses"",""Outerwear""]",percentage_off,low,moderate,0.128,0.772,0.702
+335,Fashion,Jewellery & Accessories,"[19,27,43]","[""Dresses"",""Jewellery & Gifts"",""Necklaces"",""Watches""]",percentage_off,low,light,0.164,0.704,0.706
+336,Fashion,Beauty,"[17,31,32]","[""Hair Care"",""Travel Essentials"",""Makeup"",""Skincare""]",percentage_off,low,very_frequent,0.222,0.637,0.478
+337,Sportswear,Books & Gifts,"[5,6,46]","[""Puzzles & Games"",""Running Shoes"",""Athletic Apparel"",""Reading Accessories""]",amount_off,low,light,0.083,0.594,0.516
+338,Home & Lifestyle,Electronics,"[9,47]","[""Home Electronics"",""Tech Accessories"",""Kitchen Accessories"",""General Accessories""]",percentage_off,high,light,0.215,0.786,0.547
+339,Home & Lifestyle,Department Store,"[47,48,49]","[""Home Furnishings"",""Seasonal Merchandise"",""Home Accessories""]",bundle_amount_off,high,moderate,0.162,0.655,0.426
+340,Footwear,Fashion,"[31,39,40]","[""Outerwear"",""Clothing Basics"",""Dress Shoes""]",amount_off,high,very_frequent,0.207,0.609,0.494
+341,Footwear,Sportswear,"[8,36,40]","[""Outdoor Jackets"",""Yoga & Fitness""]",percentage_off,medium,frequent,0.145,0.627,0.544
+342,Home & Lifestyle,Electronics,"[12,47,48]","[""Fragrance"",""Mobile Accessories""]",percentage_off,low,light,0.162,0.591,0.778
+343,Jewellery & Accessories,Beauty,"[14,43,44]","[""Fragrance"",""Bath & Body"",""Necklaces""]",amount_off,low,light,0.174,0.666,0.399
+344,Footwear,Department Store,"[38,49]","[""Seasonal Footwear"",""Boots"",""Everyday Footwear"",""Gift Items""]",percentage_off,high,light,0.279,0.598,0.761
+345,Department Store,Fashion,"[34,49]","[""Workwear"",""Designer Items"",""Dresses""]",bundle_amount_off,high,moderate,0.274,0.879,0.714
+346,Electronics,Fashion,"[10,27]","[""Workwear"",""Knitwear"",""Clothing Basics""]",percentage_off,low,frequent,0.267,0.874,0.351
+347,Jewellery & Accessories,Electronics,"[11,42,43,44]","[""Mobile Accessories"",""Tech Accessories"",""Leather Accessories"",""Jewellery & Gifts""]",percentage_off,high,light,0.218,0.613,0.355
+348,Footwear,Electronics,"[9,36,37]","[""Mobile Accessories"",""Audio Accessories"",""Tech Accessories"",""Boots""]",percentage_off,medium,frequent,0.084,0.677,0.356
+349,Fashion,Books & Gifts,"[28,32,46]","[""Denim"",""Clothing Basics"",""Books""]",amount_off,low,moderate,0.192,0.621,0.561
+350,Footwear,Sportswear,"[3,37]","[""Seasonal Footwear"",""Outdoor Accessories"",""Boots""]",second_item_percentage_off,high,moderate,0.162,0.873,0.501
+351,Jewellery & Accessories,Beauty,"[15,41,44,45]","[""Bath & Body"",""Jewellery & Gifts""]",percentage_off,high,moderate,0.172,0.805,0.37
+352,Jewellery & Accessories,Books & Gifts,"[42,46]","[""Gift Items"",""Earrings"",""Leather Accessories""]",bundle_amount_off,medium,moderate,0.252,0.646,0.606
+353,Fashion,Home & Lifestyle,"[21,26,48]","[""Knitwear"",""Outerwear"",""Fashion Accessories"",""Home Furnishings""]",amount_off,low,light,0.141,0.573,0.57
+354,Jewellery & Accessories,Footwear,"[39,45]","[""Sandals"",""Necklaces""]",bundle_amount_off,low,moderate,0.286,0.826,0.757
+355,Beauty,Fashion,"[14,15,31]","[""Dresses"",""Outerwear"",""Denim""]",second_item_percentage_off,high,moderate,0.104,0.709,0.761
+356,Beauty,Jewellery & Accessories,"[13,15,41]","[""Bracelets"",""Makeup"",""Leather Accessories""]",percentage_off,medium,light,0.269,0.704,0.669
+357,Beauty,Sportswear,"[8,16]","[""Athletic Apparel"",""Outdoor Jackets"",""Outdoor Accessories"",""Travel Essentials""]",bundle_amount_off,medium,moderate,0.167,0.732,0.678
+358,Home & Lifestyle,Books & Gifts,"[46,47,48]","[""Fragrance"",""Home Accessories"",""Home Furnishings""]",second_item_percentage_off,medium,frequent,0.151,0.689,0.602
+359,Home & Lifestyle,Beauty,"[17,47,48]","[""Home Accessories"",""Travel Essentials"",""Wellness""]",second_item_percentage_off,high,frequent,0.257,0.747,0.725
+360,Sportswear,Footwear,"[3,6,8,39]","[""Seasonal Footwear"",""Outdoor Jackets"",""Everyday Footwear""]",bundle_amount_off,high,frequent,0.295,0.573,0.723
+361,Electronics,Footwear,"[11,36]","[""Boots"",""Everyday Footwear"",""Dress Shoes""]",second_item_percentage_off,high,light,0.106,0.829,0.386
+362,Electronics,Fashion,"[11,12,33]","[""Audio Accessories"",""Outerwear""]",bundle_amount_off,high,very_frequent,0.171,0.68,0.391
+363,Beauty,Fashion,"[14,18,34]","[""Travel Essentials"",""Fragrance"",""Knitwear"",""Fashion Accessories""]",amount_off,medium,frequent,0.229,0.762,0.43
+364,Books & Gifts,Department Store,"[46,49]","[""Designer Items"",""Seasonal Accessories"",""Beauty Gift Sets""]",bundle_amount_off,medium,frequent,0.112,0.58,0.531
+365,Fashion,Beauty,"[13,19,24,33]","[""Hair Care"",""Makeup"",""Workwear""]",amount_off,low,light,0.075,0.647,0.547
+366,Sportswear,Department Store,"[5,50]","[""Training Accessories"",""Outdoor Jackets"",""Seasonal Accessories""]",second_item_percentage_off,high,moderate,0.249,0.808,0.374
+367,Sportswear,Books & Gifts,"[1,2,6,46]","[""Outdoor Accessories"",""Outdoor Apparel""]",bundle_amount_off,high,moderate,0.173,0.8,0.424
+368,Fashion,Jewellery & Accessories,"[20,31,42]","[""Outerwear"",""Denim"",""Necklaces""]",second_item_percentage_off,low,moderate,0.251,0.542,0.47
+369,Home & Lifestyle,Sportswear,"[1,48]","[""Outdoor Apparel"",""Yoga & Fitness"",""Home Storage""]",second_item_percentage_off,high,light,0.17,0.885,0.475
+370,Jewellery & Accessories,Books & Gifts,"[44,45,46]","[""Puzzles & Games"",""Reading Accessories"",""Leather Accessories""]",percentage_off,medium,moderate,0.293,0.65,0.576
+371,Sportswear,Beauty,"[1,3,18]","[""Fragrance"",""Outdoor Accessories"",""Skincare""]",percentage_off,high,moderate,0.192,0.712,0.709
+372,Jewellery & Accessories,Home & Lifestyle,"[41,44,48]","[""Home Decor"",""Necklaces""]",amount_off,medium,frequent,0.296,0.793,0.791
+373,Home & Lifestyle,Beauty,"[16,48]","[""Home Decor"",""Travel Essentials"",""Home Storage""]",percentage_off,high,moderate,0.204,0.644,0.454
+374,Fashion,Home & Lifestyle,"[22,47]","[""Kitchen Accessories"",""Home Decor"",""Knitwear""]",percentage_off,medium,frequent,0.207,0.777,0.758
+375,Sportswear,Beauty,"[3,6,8,15]","[""Fragrance"",""Bath & Body"",""Outdoor Apparel""]",bundle_amount_off,medium,frequent,0.235,0.783,0.572
+376,Fashion,Footwear,"[26,37]","[""Dresses"",""Boots""]",bundle_amount_off,high,light,0.232,0.628,0.443
+377,Beauty,Electronics,"[10,13,17,18]","[""Wearable Accessories"",""Hair Care"",""Skincare"",""Audio Accessories""]",second_item_percentage_off,high,moderate,0.116,0.672,0.51
+378,Fashion,Jewellery & Accessories,"[19,24,45]","[""Dresses"",""Outerwear"",""Bracelets"",""Jewellery & Gifts""]",percentage_off,high,moderate,0.105,0.887,0.4
+379,Electronics,Fashion,"[9,11,12,28]","[""General Accessories"",""Workwear"",""Fashion Accessories"",""Knitwear""]",bundle_amount_off,low,frequent,0.171,0.649,0.466
+380,Books & Gifts,Home & Lifestyle,"[46,48]","[""Home Furnishings"",""Home Accessories"",""Home Storage"",""Gift Items""]",percentage_off,low,frequent,0.184,0.88,0.389
+381,Electronics,Home & Lifestyle,"[9,10,48]","[""Home Decor"",""Mobile Plans"",""Home Storage""]",bundle_amount_off,low,moderate,0.143,0.537,0.547
+382,Sportswear,Department Store,"[7,49]","[""Running Shoes"",""Outdoor Jackets"",""Athletic Apparel""]",second_item_percentage_off,medium,frequent,0.141,0.642,0.585
+383,Fashion,Footwear,"[20,24,33,40]","[""Casual Shoes"",""Seasonal Footwear"",""Denim"",""Boots""]",second_item_percentage_off,low,moderate,0.282,0.811,0.418
+384,Fashion,Electronics,"[11,32]","[""Audio Accessories"",""Tech Accessories""]",percentage_off,low,moderate,0.263,0.628,0.472
+385,Fashion,Jewellery & Accessories,"[25,28,29,41]","[""Earrings"",""Jewellery & Gifts""]",percentage_off,medium,moderate,0.105,0.722,0.474
+386,Jewellery & Accessories,Home & Lifestyle,"[42,48]","[""Earrings"",""Home Furnishings""]",bundle_amount_off,high,very_frequent,0.106,0.768,0.744
+387,Fashion,Books & Gifts,"[22,46]","[""Workwear"",""Knitwear"",""Books""]",second_item_percentage_off,high,frequent,0.299,0.846,0.441
+388,Department Store,Jewellery & Accessories,"[43,49]","[""Jewellery & Gifts"",""Earrings""]",amount_off,high,moderate,0.17,0.879,0.412
+389,Beauty,Fashion,"[13,18,23]","[""Knitwear"",""Makeup"",""Clothing Basics"",""Denim""]",second_item_percentage_off,high,light,0.171,0.555,0.454
+390,Electronics,Jewellery & Accessories,"[9,10,41]","[""Mobile Plans"",""Jewellery & Gifts""]",amount_off,low,frequent,0.109,0.646,0.456
+391,Footwear,Electronics,"[9,36,37]","[""Sneakers"",""Boots""]",bundle_amount_off,low,moderate,0.168,0.621,0.494
+392,Fashion,Footwear,"[22,38]","[""Outerwear"",""Sandals""]",percentage_off,high,very_frequent,0.248,0.89,0.653
+393,Beauty,Department Store,"[15,16,18,50]","[""Hair Care"",""Makeup"",""Seasonal Merchandise"",""Seasonal Accessories""]",percentage_off,low,light,0.155,0.765,0.737
+394,Jewellery & Accessories,Books & Gifts,"[42,46]","[""Jewellery & Gifts"",""Gift Items""]",percentage_off,medium,frequent,0.204,0.747,0.483
+395,Sportswear,Department Store,"[3,4,49]","[""Gift Items"",""Beauty Gift Sets"",""Athletic Apparel""]",second_item_percentage_off,medium,frequent,0.099,0.575,0.625
+396,Electronics,Fashion,"[10,12,21]","[""Outerwear"",""Clothing Basics""]",percentage_off,medium,very_frequent,0.151,0.812,0.66
+397,Electronics,Books & Gifts,"[11,46]","[""Puzzles & Games"",""Mobile Plans"",""Audio Accessories"",""Reading Accessories""]",percentage_off,low,frequent,0.21,0.687,0.795
+398,Footwear,Electronics,"[11,38,39]","[""General Accessories"",""Boots"",""Shoe Care"",""Wearable Accessories""]",second_item_percentage_off,low,light,0.12,0.668,0.394
+399,Sportswear,Home & Lifestyle,"[1,7,48]","[""Home Decor"",""Sports Accessories"",""Yoga & Fitness""]",percentage_off,low,light,0.187,0.757,0.611
+400,Fashion,Jewellery & Accessories,"[20,25,35,44]","[""Fashion Accessories"",""Clothing Basics"",""Watches"",""Bracelets""]",bundle_amount_off,high,very_frequent,0.127,0.76,0.41
+401,Fashion,Department Store,"[19,23,49]","[""Dresses"",""Knitwear""]",percentage_off,medium,light,0.208,0.565,0.685
+402,Electronics,Books & Gifts,"[9,11,46]","[""Mobile Plans"",""Puzzles & Games"",""Home Electronics"",""Tech Accessories""]",second_item_percentage_off,low,very_frequent,0.184,0.792,0.706
+403,Beauty,Sportswear,"[2,13,18]","[""Beauty Gift Sets"",""Training Accessories""]",percentage_off,high,very_frequent,0.089,0.737,0.514
+404,Electronics,Department Store,"[10,50]","[""Designer Items"",""General Accessories"",""Seasonal Merchandise""]",second_item_percentage_off,medium,light,0.244,0.745,0.559
+405,Footwear,Fashion,"[21,39,40]","[""Outerwear"",""Denim""]",bundle_amount_off,low,moderate,0.214,0.531,0.441
+406,Beauty,Department Store,"[15,49]","[""Home Accessories"",""Skincare"",""Travel Essentials""]",percentage_off,high,moderate,0.083,0.718,0.381
+407,Home & Lifestyle,Electronics,"[10,47,48]","[""Home Storage"",""General Accessories"",""Home Electronics"",""Fragrance""]",amount_off,low,light,0.263,0.757,0.451
+408,Fashion,Sportswear,"[8,27]","[""Sports Accessories"",""Outdoor Jackets"",""Outdoor Accessories""]",percentage_off,medium,moderate,0.269,0.765,0.419
+409,Sportswear,Fashion,"[3,26]","[""Fashion Accessories"",""Outdoor Jackets"",""Knitwear"",""Yoga & Fitness""]",amount_off,medium,very_frequent,0.205,0.683,0.708
+410,Department Store,Sportswear,"[7,49]","[""Athletic Tops"",""Seasonal Merchandise""]",second_item_percentage_off,low,frequent,0.23,0.766,0.683
+411,Footwear,Home & Lifestyle,"[37,39,47]","[""Shoe Care"",""Everyday Footwear""]",bundle_amount_off,high,moderate,0.206,0.874,0.788
+412,Sportswear,Jewellery & Accessories,"[2,7,44]","[""Yoga & Fitness"",""Outdoor Jackets"",""Outdoor Accessories""]",bundle_amount_off,low,light,0.21,0.748,0.513
+413,Fashion,Beauty,"[15,25,27]","[""Workwear"",""Clothing Basics"",""Beauty Gift Sets""]",second_item_percentage_off,medium,moderate,0.183,0.771,0.374
+414,Jewellery & Accessories,Sportswear,"[1,41]","[""Outdoor Apparel"",""Necklaces"",""Athletic Apparel""]",amount_off,medium,very_frequent,0.13,0.783,0.413
+415,Fashion,Sportswear,"[2,32,35]","[""Outdoor Jackets"",""Outerwear"",""Training Accessories""]",amount_off,high,frequent,0.169,0.757,0.634
+416,Beauty,Sportswear,"[4,16,17]","[""Training Accessories"",""Skincare"",""Bath & Body""]",bundle_amount_off,low,frequent,0.137,0.591,0.368
+417,Books & Gifts,Jewellery & Accessories,"[42,46]","[""Puzzles & Games"",""Necklaces""]",bundle_amount_off,low,moderate,0.173,0.768,0.457
+418,Department Store,Beauty,"[17,49]","[""Skincare"",""Designer Items""]",amount_off,low,very_frequent,0.225,0.875,0.748
+419,Fashion,Jewellery & Accessories,"[31,35,43]","[""Clothing Basics"",""Jewellery & Gifts""]",bundle_amount_off,low,moderate,0.299,0.801,0.74
+420,Home & Lifestyle,Beauty,"[13,48]","[""Beauty Gift Sets"",""Home Decor"",""Makeup""]",percentage_off,medium,frequent,0.258,0.872,0.686
+421,Fashion,Electronics,"[11,26,34]","[""Audio Accessories"",""Denim""]",amount_off,medium,moderate,0.189,0.592,0.405
+422,Sportswear,Home & Lifestyle,"[1,4,48]","[""Athletic Tops"",""Home Furnishings"",""Yoga & Fitness"",""Training Accessories""]",bundle_amount_off,high,moderate,0.28,0.623,0.363
+423,Fashion,Sportswear,"[6,28,30,31]","[""Dresses"",""Outdoor Jackets"",""Clothing Basics""]",bundle_amount_off,low,moderate,0.298,0.712,0.508
+424,Fashion,Books & Gifts,"[22,25,46]","[""Books"",""Puzzles & Games"",""Clothing Basics""]",second_item_percentage_off,low,moderate,0.187,0.54,0.445
+425,Electronics,Footwear,"[9,12,38]","[""Audio Accessories"",""Dress Shoes"",""Shoe Care"",""Sandals""]",amount_off,high,light,0.197,0.535,0.388
+426,Home & Lifestyle,Footwear,"[37,47,48]","[""Shoe Care"",""Home Furnishings"",""Home Accessories""]",percentage_off,medium,moderate,0.188,0.626,0.702
+427,Beauty,Books & Gifts,"[15,18,46]","[""Hair Care"",""Reading Accessories"",""Beauty Gift Sets"",""Bath & Body""]",bundle_amount_off,high,moderate,0.299,0.675,0.49
+428,Footwear,Electronics,"[10,36]","[""Audio Accessories"",""General Accessories"",""Shoe Care"",""Wearable Accessories""]",percentage_off,high,light,0.298,0.739,0.358
+429,Beauty,Electronics,"[9,14,16]","[""Mobile Plans"",""Tech Accessories"",""General Accessories"",""Travel Essentials""]",amount_off,low,frequent,0.266,0.819,0.766
+430,Fashion,Sportswear,"[2,34]","[""Athletic Tops"",""Training Accessories""]",second_item_percentage_off,high,light,0.291,0.675,0.628
+431,Books & Gifts,Electronics,"[10,46]","[""Wearable Accessories"",""Home Electronics"",""Mobile Accessories""]",percentage_off,low,frequent,0.234,0.89,0.476
+432,Fashion,Books & Gifts,"[23,25,46]","[""Fashion Accessories"",""Books"",""Outerwear"",""Puzzles & Games""]",bundle_amount_off,high,frequent,0.252,0.759,0.54
+433,Electronics,Jewellery & Accessories,"[9,10,44]","[""Leather Accessories"",""Home Electronics"",""Audio Accessories""]",amount_off,medium,moderate,0.249,0.7,0.464
+434,Fashion,Footwear,"[23,29,37]","[""Denim"",""Workwear""]",amount_off,medium,frequent,0.075,0.699,0.41
+435,Jewellery & Accessories,Fashion,"[28,41]","[""Earrings"",""Bracelets"",""Fashion Accessories""]",amount_off,medium,moderate,0.131,0.561,0.617
+436,Fashion,Home & Lifestyle,"[19,34,48]","[""Home Furnishings"",""Home Accessories""]",second_item_percentage_off,medium,moderate,0.082,0.611,0.698
+437,Jewellery & Accessories,Electronics,"[9,43]","[""Tech Accessories"",""Necklaces""]",amount_off,high,moderate,0.181,0.78,0.758
+438,Department Store,Jewellery & Accessories,"[42,49]","[""Gift Items"",""Home Accessories"",""Fashion Accessories"",""Designer Items""]",percentage_off,high,moderate,0.122,0.589,0.356
+439,Footwear,Electronics,"[10,36]","[""General Accessories"",""Casual Shoes"",""Wearable Accessories""]",bundle_amount_off,medium,moderate,0.098,0.82,0.513
+440,Electronics,Department Store,"[9,11,12,50]","[""Wearable Accessories"",""Seasonal Merchandise"",""Seasonal Accessories""]",amount_off,low,moderate,0.072,0.609,0.694
+441,Fashion,Electronics,"[9,20,21,33]","[""Dresses"",""Knitwear"",""Home Electronics"",""Clothing Basics""]",amount_off,medium,light,0.199,0.635,0.692
+442,Footwear,Sportswear,"[5,36,38]","[""Sandals"",""Boots"",""Sneakers"",""Outdoor Apparel""]",bundle_amount_off,low,light,0.11,0.631,0.522
+443,Beauty,Jewellery & Accessories,"[13,17,18,41]","[""Beauty Gift Sets"",""Travel Essentials"",""Fragrance""]",second_item_percentage_off,high,frequent,0.076,0.59,0.357
+444,Sportswear,Electronics,"[3,7,11]","[""Audio Accessories"",""Outdoor Accessories"",""Outdoor Apparel""]",second_item_percentage_off,high,light,0.237,0.681,0.795
+445,Fashion,Jewellery & Accessories,"[20,21,45]","[""Watches"",""Dresses"",""Fashion Accessories""]",second_item_percentage_off,high,frequent,0.238,0.779,0.631
+446,Fashion,Home & Lifestyle,"[20,29,33,48]","[""Home Accessories"",""Outerwear""]",second_item_percentage_off,medium,frequent,0.172,0.885,0.668
+447,Sportswear,Books & Gifts,"[2,6,46]","[""Puzzles & Games"",""Training Accessories""]",amount_off,high,frequent,0.29,0.795,0.474
+448,Sportswear,Footwear,"[2,4,39]","[""Everyday Footwear"",""Casual Shoes"",""Training Accessories""]",amount_off,low,frequent,0.075,0.734,0.579
+449,Jewellery & Accessories,Home & Lifestyle,"[42,44,45,48]","[""Home Storage"",""Jewellery & Gifts"",""Fashion Accessories""]",percentage_off,low,frequent,0.263,0.831,0.505
+450,Fashion,Books & Gifts,"[28,46]","[""Denim"",""Gift Items"",""Workwear""]",amount_off,medium,moderate,0.171,0.727,0.508
+451,Footwear,Beauty,"[16,37,39]","[""Dress Shoes"",""Beauty Gift Sets"",""Seasonal Footwear"",""Travel Essentials""]",amount_off,medium,light,0.207,0.571,0.421
+452,Sportswear,Footwear,"[1,2,38]","[""Outdoor Jackets"",""Casual Shoes"",""Athletic Apparel"",""Athletic Tops""]",bundle_amount_off,low,moderate,0.2,0.742,0.64
+453,Fashion,Footwear,"[26,36]","[""Everyday Footwear"",""Clothing Basics"",""Dresses""]",amount_off,low,moderate,0.237,0.883,0.579
+454,Electronics,Books & Gifts,"[11,12,46]","[""Mobile Accessories"",""Home Electronics"",""Puzzles & Games"",""Wearable Accessories""]",bundle_amount_off,medium,very_frequent,0.215,0.871,0.562
+455,Jewellery & Accessories,Department Store,"[41,45,49]","[""Designer Items"",""Gift Items"",""Beauty Gift Sets""]",bundle_amount_off,medium,moderate,0.203,0.784,0.593
+456,Books & Gifts,Department Store,"[46,50]","[""Reading Accessories"",""Home Accessories""]",amount_off,medium,frequent,0.261,0.776,0.463
+457,Jewellery & Accessories,Beauty,"[17,43,44]","[""Skincare"",""Wellness"",""Earrings""]",bundle_amount_off,medium,frequent,0.237,0.551,0.365
+458,Department Store,Books & Gifts,"[46,50]","[""Designer Items"",""Puzzles & Games"",""Seasonal Merchandise"",""Gift Items""]",bundle_amount_off,low,light,0.163,0.735,0.504
+459,Electronics,Fashion,"[9,10,11,35]","[""Fashion Accessories"",""Home Electronics""]",bundle_amount_off,low,moderate,0.083,0.673,0.415
+460,Jewellery & Accessories,Fashion,"[28,44,45]","[""Workwear"",""Earrings"",""Fashion Accessories""]",amount_off,medium,light,0.292,0.886,0.722
+461,Fashion,Jewellery & Accessories,"[19,34,45]","[""Bracelets"",""Knitwear""]",bundle_amount_off,medium,moderate,0.203,0.682,0.422
+462,Footwear,Beauty,"[14,36]","[""Wellness"",""Sandals""]",amount_off,high,moderate,0.11,0.681,0.479
+463,Home & Lifestyle,Beauty,"[13,47,48]","[""Skincare"",""Travel Essentials"",""Beauty Gift Sets""]",second_item_percentage_off,medium,frequent,0.195,0.795,0.546
+464,Jewellery & Accessories,Sportswear,"[1,41,42]","[""Running Shoes"",""Outdoor Apparel""]",amount_off,low,light,0.156,0.628,0.737
+465,Fashion,Electronics,"[12,33]","[""Tech Accessories"",""Home Electronics"",""Wearable Accessories""]",second_item_percentage_off,low,frequent,0.088,0.894,0.722
+466,Fashion,Electronics,"[12,19,27]","[""Mobile Plans"",""Mobile Accessories"",""Knitwear"",""Wearable Accessories""]",percentage_off,medium,very_frequent,0.196,0.603,0.674
+467,Sportswear,Home & Lifestyle,"[3,47]","[""Outdoor Apparel"",""Home Accessories"",""Home Storage""]",amount_off,medium,light,0.076,0.885,0.518
+468,Jewellery & Accessories,Department Store,"[42,43,45,50]","[""Jewellery & Gifts"",""Necklaces"",""Home Accessories"",""Bracelets""]",amount_off,low,moderate,0.129,0.809,0.738
+469,Beauty,Jewellery & Accessories,"[16,17,44]","[""Necklaces"",""Travel Essentials"",""Bracelets""]",percentage_off,medium,moderate,0.078,0.624,0.726
+470,Fashion,Footwear,"[22,27,37]","[""Knitwear"",""Sneakers""]",bundle_amount_off,low,frequent,0.291,0.566,0.445
+471,Jewellery & Accessories,Beauty,"[17,44,45]","[""Jewellery & Gifts"",""Watches"",""Bath & Body""]",bundle_amount_off,low,moderate,0.23,0.817,0.747
+472,Fashion,Electronics,"[12,19,32]","[""Dresses"",""Workwear"",""Home Electronics""]",second_item_percentage_off,medium,frequent,0.135,0.72,0.697
+473,Jewellery & Accessories,Home & Lifestyle,"[45,48]","[""Bracelets"",""Watches"",""Jewellery & Gifts""]",amount_off,high,frequent,0.233,0.719,0.443
+474,Fashion,Electronics,"[12,23]","[""Outerwear"",""Audio Accessories"",""Mobile Accessories""]",amount_off,high,light,0.264,0.527,0.446
+475,Electronics,Department Store,"[10,11,49]","[""Mobile Plans"",""Audio Accessories""]",bundle_amount_off,high,moderate,0.104,0.883,0.671
+476,Fashion,Sportswear,"[7,26,29]","[""Outerwear"",""Knitwear"",""Outdoor Apparel"",""Yoga & Fitness""]",amount_off,medium,moderate,0.089,0.643,0.428
+477,Beauty,Footwear,"[15,18,36]","[""Hair Care"",""Travel Essentials"",""Bath & Body"",""Sneakers""]",percentage_off,low,moderate,0.262,0.552,0.482
+478,Electronics,Footwear,"[11,37]","[""Sandals"",""Boots"",""Shoe Care""]",bundle_amount_off,medium,light,0.198,0.8,0.616
+479,Department Store,Sportswear,"[3,50]","[""Athletic Tops"",""Seasonal Merchandise"",""Seasonal Accessories""]",amount_off,high,light,0.197,0.695,0.657
+480,Jewellery & Accessories,Fashion,"[35,44]","[""Dresses"",""Denim"",""Fashion Accessories""]",bundle_amount_off,medium,light,0.216,0.594,0.366
+481,Electronics,Books & Gifts,"[9,10,46]","[""Books"",""Wearable Accessories""]",bundle_amount_off,medium,light,0.117,0.88,0.556
+482,Footwear,Fashion,"[19,39,40]","[""Everyday Footwear"",""Sneakers"",""Boots"",""Casual Shoes""]",bundle_amount_off,medium,moderate,0.144,0.846,0.63
+483,Electronics,Jewellery & Accessories,"[9,12,41]","[""Bracelets"",""Earrings"",""Wearable Accessories""]",amount_off,high,moderate,0.133,0.566,0.788
+484,Sportswear,Electronics,"[3,9]","[""Sports Accessories"",""Athletic Tops"",""Athletic Apparel"",""Audio Accessories""]",percentage_off,medium,frequent,0.082,0.585,0.725
+485,Electronics,Books & Gifts,"[10,12,46]","[""Wearable Accessories"",""Gift Items"",""General Accessories""]",amount_off,low,frequent,0.141,0.656,0.458
+486,Jewellery & Accessories,Department Store,"[45,50]","[""Watches"",""Jewellery & Gifts""]",amount_off,medium,moderate,0.084,0.601,0.582
+487,Fashion,Department Store,"[24,25,50]","[""Denim"",""Seasonal Accessories"",""Beauty Gift Sets""]",second_item_percentage_off,medium,moderate,0.204,0.709,0.716
+488,Jewellery & Accessories,Beauty,"[17,45]","[""Hair Care"",""Fragrance""]",bundle_amount_off,high,very_frequent,0.125,0.542,0.58
+489,Sportswear,Footwear,"[2,3,40]","[""Yoga & Fitness"",""Outdoor Apparel"",""Athletic Tops""]",bundle_amount_off,high,light,0.276,0.851,0.667
+490,Footwear,Home & Lifestyle,"[37,38,48]","[""Home Accessories"",""Seasonal Footwear""]",percentage_off,medium,light,0.093,0.868,0.633
+491,Footwear,Department Store,"[39,49]","[""Seasonal Footwear"",""Seasonal Accessories"",""Gift Items""]",second_item_percentage_off,high,moderate,0.245,0.855,0.635
+492,Beauty,Sportswear,"[2,14]","[""Beauty Gift Sets"",""Outdoor Accessories""]",bundle_amount_off,high,moderate,0.271,0.529,0.442
+493,Footwear,Department Store,"[36,38,40,49]","[""Shoe Care"",""Sneakers""]",percentage_off,low,moderate,0.232,0.821,0.516
+494,Jewellery & Accessories,Books & Gifts,"[41,45,46]","[""Fashion Accessories"",""Necklaces"",""Books""]",amount_off,high,light,0.164,0.785,0.421
+495,Sportswear,Electronics,"[6,9]","[""Mobile Accessories"",""Outdoor Jackets""]",percentage_off,medium,very_frequent,0.281,0.733,0.75
+496,Footwear,Beauty,"[13,39,40]","[""Casual Shoes"",""Bath & Body"",""Beauty Gift Sets""]",bundle_amount_off,medium,very_frequent,0.167,0.861,0.62
+497,Department Store,Books & Gifts,"[46,49,50]","[""Seasonal Merchandise"",""Home Accessories""]",amount_off,medium,frequent,0.088,0.571,0.618
+498,Electronics,Footwear,"[10,11,12,40]","[""Dress Shoes"",""Casual Shoes"",""Mobile Plans"",""Wearable Accessories""]",bundle_amount_off,low,frequent,0.257,0.626,0.721
+499,Fashion,Jewellery & Accessories,"[27,33,44]","[""Outerwear"",""Leather Accessories"",""Necklaces""]",second_item_percentage_off,high,moderate,0.207,0.64,0.738
+500,Jewellery & Accessories,Electronics,"[10,42]","[""Jewellery & Gifts"",""Watches"",""Mobile Plans"",""Audio Accessories""]",bundle_amount_off,medium,moderate,0.237,0.764,0.483
