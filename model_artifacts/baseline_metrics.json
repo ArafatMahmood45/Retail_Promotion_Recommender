@@ -1,0 +1,6 @@
+{
+    "users_evaluated": 417,
+    "precision@5": 0.0542,
+    "recall@5": 0.1192,
+    "hit_rate@5": 0.2446
+}
