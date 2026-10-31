@@ -85,19 +85,38 @@ The `train_recommender.py` script:
 2. Builds and trains the Hybrid NCF neural network.
 3. Uses sampled unobserved promotions as negative training examples.
 4. Evaluates the model using held-out interactions.
-5. Saves the trained model as `hybrid_recommender.pt`.
+5. Saves the trained model as model_artifacts/hybrid_recommender.pt, along with feature mappings and evaluation results in model_artifacts/test_metrics.json.
 
-### Initial Model Evaluation
+### Model Evaluation and Baseline Comparison
 
-The initial model was trained for 12 epochs and evaluated using 417 users with relevant test interactions.
+The Hybrid NCF model was trained for 12 epochs and evaluated using held-out synthetic shopper interactions.
 
-| Evaluation Metric | Result |
-|---|---:|
-| Precision@5 | 7.29% |
-| Recall@5 | 14.95% |
-| Hit Rate@5 | 31.65% |
+To assess its recommendation performance, a **popularity-based recommendation baseline** was implemented in `evaluate_baseline.py`.
 
-These are preliminary results based on synthetic data. Further evaluation and comparison against baseline recommendation methods are required.
+The baseline ranks promotions according to the number of clicks, saves, and purchases recorded in the training dataset. Unlike the Hybrid NCF model, it does not learn individual shopper preferences or use promotion characteristics to predict relevance.
+
+Both recommendation approaches were evaluated using the same 417 eligible test users, with consistent evaluation criteria:
+
+- Only promotions active at the evaluation timestamp were considered.
+- Promotions previously interacted with during training and validation were excluded.
+- Clicks, saves, and purchases were treated as positive interactions.
+- Recommendation performance was measured using Precision@5, Recall@5, and Hit Rate@5.
+
+#### Model Performance Comparison
+
+| Evaluation Metric | Hybrid NCF | Popularity Baseline |
+|---|---:|---:|
+| Precision@5 | **7.29%** | 5.42% |
+| Recall@5 | **14.95%** | 11.92% |
+| Hit Rate@5 | **31.65%** | 24.46% |
+
+The Hybrid NCF model outperformed the popularity-based baseline across all three evaluation metrics.
+
+These results suggest that combining shopper interaction patterns with store and promotion features can improve recommendation ranking compared with relying solely on historical promotion popularity.
+
+The trained model, feature mappings, and evaluation results are saved in the `model_artifacts/` directory.
+
+**Note:** All results are based on synthetic shopper interactions and do not represent validated performance with real customers.
 
 ## Technology Stack
 
@@ -131,10 +150,11 @@ These are preliminary results based on synthetic data. Further evaluation and co
 - [x] Prepared training, validation, and test datasets.
 - [x] Implemented and trained an initial Hybrid NCF recommendation model.
 - [x] Evaluated the initial model and saved its trained parameters.
+- - [x] Implemented a popularity-based recommendation baseline using historical shopper engagement.
+- [x] Evaluated Hybrid NCF against the popularity baseline using consistent candidate eligibility and ranking metrics.
 
 ### Remaining Work
 
-- [ ] Compare the recommendation model against baseline methods.
 - [ ] Improve model performance and evaluate recommendations at different ranking sizes.
 - [ ] Create and populate the PostgreSQL database.
 - [ ] Develop FastAPI endpoints for stores, promotions, and personalized recommendations.
