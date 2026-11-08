@@ -1,4 +1,15 @@
+
+
+# React dependencies
+node_modules/
+dist/
+
+# Python environment
 retail_venv/
+venv/
 __pycache__/
-.env
 *.pyc
+
+# Environment variables
+.env
+.env.*
