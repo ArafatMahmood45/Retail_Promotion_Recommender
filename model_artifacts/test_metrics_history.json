@@ -1,0 +1,11 @@
+{
+  "users_evaluated@5": 417,
+  "precision@5": 0.093,
+  "recall@5": 0.1963,
+  "hit_rate@5": 0.3957,
+  "users_evaluated@10": 417,
+  "precision@10": 0.0808,
+  "recall@10": 0.342,
+  "hit_rate@10": 0.5923,
+  "users_evaluated": 417
+}

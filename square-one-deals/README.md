@@ -1,29 +1,14 @@
-# Square One Deals — React frontend
+# Square One Deals — React frontend (connected)
 
-A four-page student capstone demo website for exploring synthetic Square One mall promotions. Uses the existing FastAPI/Hybrid NCF recommender backend.
+Uses the existing FastAPI history-aware recommender and SQLite demo interaction endpoints.
 
-## Setup
+## Run
 
-1. Install Node.js LTS (includes npm).
-2. In this folder run `npm install`.
-3. Create a folder called `public` and copy **exactly these three files** from your existing Python project into it:
-   - `stores.csv`
-   - `promotions_with_categories.csv`
-   - `users.csv`
-4. In the original Python project, activate `retail_venv` and start FastAPI: `python -m uvicorn api:app --reload`.
-5. In this React project, run `npm run dev` and open the URL printed by Vite (usually http://localhost:5173).
+1. In your Python project, run `python -m uvicorn main:app --reload` (replace `main` with your FastAPI filename if different).
+2. In this React folder, run `npm install` and `npm run dev`.
+3. Open http://localhost:5173. The Vite proxy forwards `/api` requests to http://127.0.0.1:8000.
+4. Select Shopper 3 and demo date 2026-10-20 under Profile; open For You.
+5. Use View, Click, Save, or Simulate purchase on an offer. The action is recorded through FastAPI, and the recommendation feed refreshes.
+6. Profile displays SQLite demo activity and can reset activity for the selected shopper/date.
 
-## Pages
-
-- `/` Home: categories, featured stores, active demo offers, personalized recommendations link
-- `/stores` Stores directory with category and text filters
-- `/stores/:id` Individual store's active offers (dynamic route)
-- `/for-you` Recommendations fetched from the existing FastAPI `/recommendations/{user_id}` endpoint
-- `/profile` Shopper and demo-date selector
-
-## Notes
-
-- The demo date starts at October 20, 2026 because offers are synthetic and may have historical validity dates.
-- This frontend reads the three CSVs directly for store discovery and active offers. The personalized recommendations page calls FastAPI. A later phase can replace direct CSV access with dedicated API endpoints and PostgreSQL.
-- No click, save, purchase, or authentication functionality is claimed. Those require backend interaction tracking.
-- All offers are synthetic and the website is not affiliated with Square One Shopping Centre.
+The CSVs in `public/` are synthetic and provide store discovery. The API provides personalized rankings. No real checkout or authentication is implemented. Views have zero model preference weight. The model uses new interaction history for inference; its neural weights are not retrained on each action.

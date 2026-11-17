@@ -13,7 +13,7 @@ BASE = Path(__file__).resolve().parent
 PREPARED = BASE / "prepared_data"
 ARTIFACTS = BASE / "model_artifacts"
 
-K = 5
+KS = [5, 10]
 POSITIVE_EVENTS = {"click", "save", "purchase"}
 
 # --------------------------------------------------
@@ -61,7 +61,6 @@ popularity = (
     .to_dict()
 )
 
-# New promotions receive zero popularity.
 popularity_scores = {
     int(promotion_id): int(popularity.get(promotion_id, 0))
     for promotion_id in promos.index
@@ -96,7 +95,7 @@ positive_test = test[
 ]
 
 # --------------------------------------------------
-# 6. GET PROMOTIONS ACTIVE AT A GIVEN TIME
+# 6. GET ACTIVE PROMOTIONS
 # --------------------------------------------------
 
 def eligible_ids(timestamp):
@@ -111,18 +110,16 @@ def eligible_ids(timestamp):
 
 
 # --------------------------------------------------
-# 7. EVALUATE POPULARITY RECOMMENDATIONS
+# 7. EVALUATE POPULARITY BASELINE AT K=5 AND K=10
 # --------------------------------------------------
 
-scores = []
-users_evaluated = []
+scores = {k: [] for k in KS}
 
 for user_id, group in positive_test.groupby("user_id"):
 
-    # Match the NCF evaluation timestamp.
+    # Same evaluation timestamp as neural network.
     at = group["interaction_timestamp"].min()
 
-    # Relevant test promotions.
     relevant = set(
         group.loc[
             group["interaction_timestamp"] >= at,
@@ -130,21 +127,19 @@ for user_id, group in positive_test.groupby("user_id"):
         ].astype(int)
     )
 
-    # Only active promotions not seen in history.
     candidates = [
         int(p)
         for p in eligible_ids(at)
         if int(p) not in history_seen.get(user_id, set())
     ]
 
-    # Match NCF ground-truth filtering.
     relevant &= set(candidates)
 
     if not relevant or not candidates:
         continue
 
-    # Rank eligible promotions by historical popularity.
-    # Stable tie-break: promotion ID.
+    # Rank by historical popularity.
+    # Break ties using promotion ID.
     ranked = sorted(
         candidates,
         key=lambda p: (
@@ -153,130 +148,162 @@ for user_id, group in positive_test.groupby("user_id"):
         )
     )
 
-    top_k = set(ranked[:K])
+    for k in KS:
 
-    hits = len(top_k & relevant)
+        top_k = set(ranked[:k])
 
-    precision = hits / K
-    recall = hits / len(relevant)
-    hit_rate = float(hits > 0)
+        hits = len(top_k & relevant)
 
-    scores.append((precision, recall, hit_rate))
-    users_evaluated.append(user_id)
+        precision = hits / k
+        recall = hits / len(relevant)
+        hit_rate = float(hits > 0)
+
+        scores[k].append(
+            (precision, recall, hit_rate)
+        )
 
 # --------------------------------------------------
 # 8. CALCULATE BASELINE METRICS
 # --------------------------------------------------
 
-if not scores:
-    raise ValueError(
-        "No eligible users found for baseline evaluation."
+baseline_metrics = {}
+
+for k in KS:
+
+    if not scores[k]:
+        raise ValueError(
+            f"No eligible users found for K={k}."
+        )
+
+    arr = np.array(scores[k])
+
+    baseline_metrics[f"users_evaluated@{k}"] = len(scores[k])
+
+    baseline_metrics[f"precision@{k}"] = round(
+        float(arr[:, 0].mean()), 4
     )
 
-arr = np.array(scores)
+    baseline_metrics[f"recall@{k}"] = round(
+        float(arr[:, 1].mean()), 4
+    )
 
-baseline_metrics = {
-    "users_evaluated": len(scores),
-    f"precision@{K}": round(float(arr[:, 0].mean()), 4),
-    f"recall@{K}": round(float(arr[:, 1].mean()), 4),
-    f"hit_rate@{K}": round(float(arr[:, 2].mean()), 4),
-}
+    baseline_metrics[f"hit_rate@{k}"] = round(
+        float(arr[:, 2].mean()), 4
+    )
+
+baseline_metrics["users_evaluated"] = (
+    baseline_metrics["users_evaluated@5"]
+)
 
 print("\nPOPULARITY BASELINE RESULTS")
 print("-" * 45)
 
 for metric, value in baseline_metrics.items():
-    if metric == "users_evaluated":
+    if metric.startswith("users_evaluated"):
         print(f"{metric}: {value}")
     else:
         print(f"{metric}: {value:.4f} ({value:.2%})")
 
 # --------------------------------------------------
-# 9. LOAD SAVED HYBRID NCF METRICS
+# 9. LOAD WEIGHTED NEURAL NETWORK METRICS
 # --------------------------------------------------
 
-ncf_path = ARTIFACTS / "test_metrics.json"
+ncf_path = ARTIFACTS / "test_metrics_weighted.json"
 
 if not ncf_path.exists():
     raise FileNotFoundError(
-        f"NCF metrics file not found: {ncf_path}"
+        f"Weighted model metrics not found: {ncf_path}"
     )
 
 with open(ncf_path, "r", encoding="utf-8") as file:
     ncf_metrics = json.load(file)
 
 # --------------------------------------------------
-# 10. COMPARE THE TWO APPROACHES
+# 10. COMPARE BOTH APPROACHES
 # --------------------------------------------------
+
+metric_names = [
+    ("Precision@5", "precision@5"),
+    ("Recall@5", "recall@5"),
+    ("Hit Rate@5", "hit_rate@5"),
+    ("Precision@10", "precision@10"),
+    ("Recall@10", "recall@10"),
+    ("Hit Rate@10", "hit_rate@10"),
+]
 
 comparison = pd.DataFrame({
     "Metric": [
-        "Precision@5",
-        "Recall@5",
-        "Hit Rate@5",
+        name for name, key in metric_names
     ],
-    "Hybrid NCF": [
-        ncf_metrics["precision@5"],
-        ncf_metrics["recall@5"],
-        ncf_metrics["hit_rate@5"],
+    "Weighted Hybrid NCF": [
+        ncf_metrics[key]
+        for name, key in metric_names
     ],
     "Popularity Baseline": [
-        baseline_metrics["precision@5"],
-        baseline_metrics["recall@5"],
-        baseline_metrics["hit_rate@5"],
+        baseline_metrics[key]
+        for name, key in metric_names
     ],
 })
 
 comparison["Difference"] = (
-    comparison["Hybrid NCF"]
+    comparison["Weighted Hybrid NCF"]
     - comparison["Popularity Baseline"]
 )
 
 print("\nMODEL COMPARISON")
-print("-" * 65)
+print("-" * 75)
 
 print(
     comparison.to_string(
         index=False,
         formatters={
-            "Hybrid NCF": "{:.2%}".format,
+            "Weighted Hybrid NCF": "{:.2%}".format,
             "Popularity Baseline": "{:.2%}".format,
             "Difference": "{:+.2%}".format,
         }
     )
 )
 
-print(
-    "\nNCF users evaluated:",
-    ncf_metrics["users_evaluated"]
-)
-
-print(
-    "Baseline users evaluated:",
-    baseline_metrics["users_evaluated"]
-)
-
-if (
-    ncf_metrics["users_evaluated"]
-    == baseline_metrics["users_evaluated"]
-):
-    print(
-        "\nEvaluation user counts match."
-    )
-else:
-    print(
-        "\nWARNING: Evaluation user counts differ."
-    )
-
 # --------------------------------------------------
-# 11. SAVE BASELINE METRICS
+# 11. CHECK USER COUNTS
 # --------------------------------------------------
 
-ARTIFACTS.mkdir(parents=True, exist_ok=True)
+for k in KS:
+
+    ncf_count = ncf_metrics.get(
+        f"users_evaluated@{k}",
+        ncf_metrics.get("users_evaluated")
+    )
+
+    baseline_count = baseline_metrics[
+        f"users_evaluated@{k}"
+    ]
+
+    print(f"\nK={k}")
+    print("NCF users evaluated:", ncf_count)
+    print("Baseline users evaluated:", baseline_count)
+
+    if ncf_count == baseline_count:
+        print("Evaluation user counts match.")
+    else:
+        print("WARNING: Evaluation user counts differ.")
+
+# --------------------------------------------------
+# 12. SAVE BASELINE METRICS
+# --------------------------------------------------
+
+ARTIFACTS.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 output_path = ARTIFACTS / "baseline_metrics.json"
 
 with open(output_path, "w", encoding="utf-8") as file:
-    json.dump(baseline_metrics, file, indent=4)
+    json.dump(
+        baseline_metrics,
+        file,
+        indent=4
+    )
 
 print(f"\nBaseline metrics saved to: {output_path}")
